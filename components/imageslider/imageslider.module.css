@@ -1,0 +1,19 @@
+.imageslider > div {
+	opacity: 1;	
+	transition: opacity 1s;
+	z-index: -1;
+}
+
+.imageslider > div.current {
+	animation: flasher 1.5s;
+	z-index: 0;
+}
+
+@keyframes flasher {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

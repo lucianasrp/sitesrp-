@@ -1,7 +1,5 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import Whatsapp from '../components/whatsapp'
 
 export const metadata = {
   title: 'Create Next App',
@@ -11,7 +9,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className='flex flex-col h-screen justify-between'>
+        <div className='mb-auto'>
+          {children}
+        </div>
+        <Whatsapp />
+      </body>
     </html>
   )
 }
