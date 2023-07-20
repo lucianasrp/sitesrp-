@@ -13,6 +13,7 @@ export default function RootLayout({ children }) {
         <div className='mb-auto'>
           {children}
         </div>
+
         <Whatsapp />
       </body>
     </html>
