@@ -1,4 +1,6 @@
 import './globals.css'
+
+import Navbar from '../components/navbar'
 import Whatsapp from '../components/whatsapp'
 
 export const metadata = {
@@ -10,6 +12,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className='flex flex-col h-screen justify-between'>
+
+        <Navbar src='/logo_white.svg'></Navbar>
         <div className='mb-auto'>
           {children}
         </div>
