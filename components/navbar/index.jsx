@@ -14,8 +14,8 @@ export default function Navbar({ className, src, children }) {
 
 	return (
 		<>
-			<nav className={`relative w-full p-0 z-[100] bg-white ${className}`}>
-				<container className={`w-full mx-auto grid grid-cols-8`}>
+			<nav className={`fixed w-full p-0 z-[100] bg-white ${className}`}>
+				<container className={`w-full mx-auto grid grid-cols-5 md:grid-cols-8`}>
 					<Link className='col-span-2 bg-primary p-2' href='/'>
 						<Image
 							className='ml-auto'
@@ -34,9 +34,9 @@ export default function Navbar({ className, src, children }) {
 						<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
 						<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
 						<div className="divider md:divider-horizontal"></div>
-						<Socials />
+						<Socials className='hidden lg:flex' />
 					</div>
-					<div className='col-span-5 
+					<div className='col-span-3 
 													flex md:hidden flex-row items-center justify-end gap-4 p-2
 													transition-all duration-500 ease-in-out font-bold'>
 						<div className='flex w-8 h-8 items-center justify-center cursor-pointer' onClick={ToggleMenu}>
@@ -47,42 +47,6 @@ export default function Navbar({ className, src, children }) {
 			</nav>
 			<div className='fixed flex flex-col items-center justify-center w-full h-full z-40 gap-6 backdrop-blur-md bg-white/30 transition-all duration-500' style={{top: (currentState ? '0%' : '-100%')}}>
 				<div className='flex flex-col items-center max-h-[60vh] overflow-y-auto w-full text-2xl font-bold gap-4'>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
 					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
 					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
 					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
