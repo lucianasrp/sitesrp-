@@ -9,6 +9,7 @@ export default function Home() {
 		<>
 			{/* INTRODUÇÃO */}
 			<Intro className='relative' img='home/hero-background.jpg'>
+				{/*
 				<div className='grid md:grid-cols-7 p-4 pt-40 md:pt-4 gap-6 w-full max-w-7xl'>
 					<div className='flex self-end flex-col md:col-span-3 text-white'>
 						<h1 className='text-6xl text-center md:text-left'>Sistema de Telefonia IP Pegasus PABX</h1>
@@ -18,6 +19,7 @@ export default function Home() {
 						<img className='w-full' src='home/hero-photo.png' />
 					</div>
 				</div>
+				*/}
 			</Intro>
 
 			{ /* APRESENTAÇÃO */}

@@ -14,27 +14,24 @@ export default function Navbar({ className, src, children }) {
 
 	return (
 		<>
-			<nav className={`fixed w-full p-0 z-[100] bg-white ${className}`}>
+			<nav className={`fixed w-full p-0 z-[100] bg-base-100 ${className}`}>
 				<container className={`w-full mx-auto grid grid-cols-5 md:grid-cols-8`}>
-					<Link className='col-span-2 bg-primary p-2' href='/'>
-						<Image
-							className='ml-auto'
+					<Link className='col-span-2 bg-primary p-2 lg:p-5' href='/'>
+						<img
+							className='ml-auto h-10 lg:h-24'
 							src={src}
-							alt='Home Logo'
-							width={96}
-							height={96}
-							priority
 						/>
 					</Link>
 
 					<div className='col-span-5 
-													hidden md:flex flex-row items-center justify-end gap-4 p-2
+													hidden md:flex flex-col items-end justify-end gap-4 px-2
 													transition-all duration-500 ease-in-out font-bold z-50'>
-						<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-						<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-						<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
-						<div className="divider md:divider-horizontal"></div>
 						<Socials className='hidden lg:flex' />
+						<div className='flex'>
+							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Menu 1</Link>
+							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Menu 2</Link>
+							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Menu 3</Link>
+						</div>
 					</div>
 					<div className='col-span-3 
 													flex md:hidden flex-row items-center justify-end gap-4 p-2
@@ -47,9 +44,9 @@ export default function Navbar({ className, src, children }) {
 			</nav>
 			<div className='fixed flex flex-col items-center justify-center w-full h-full z-40 gap-6 backdrop-blur-md bg-white/30 transition-all duration-500' style={{top: (currentState ? '0%' : '-100%')}}>
 				<div className='flex flex-col items-center max-h-[60vh] overflow-y-auto w-full text-2xl font-bold gap-4'>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 1</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 2</Link>
-					<Link href='#' className='border-solid border-b-2 border-white hover:border-primary'>Menu 3</Link>
+					<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary'>Menu 1</Link>
+					<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary'>Menu 2</Link>
+					<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary'>Menu 3</Link>
 				</div>
 				<div>
 					<Socials />

@@ -1,9 +1,9 @@
 export const SOCIAL = {
-	tiktok: 'companyTiktok',
+	//tiktok: 'companyTiktok',
 	instagram: 'companyInstagram',
-	threads: 'companyThreads',
+	//threads: 'companyThreads',
 	facebook: 'companyFacebool',
-	twitter: 'companyTwitter',
+	//twitter: 'companyTwitter',
 	linkedin: 'companyLinkedin',
 	youtube: 'companyYouTube',
 }
