@@ -26,7 +26,9 @@ export default function Navbar({ className, src, children }) {
 					<div className='col-span-5 
 													hidden md:flex flex-col items-end justify-end gap-4 px-2
 													transition-all duration-500 ease-in-out font-bold z-50'>
-						<Socials className='hidden lg:flex' />
+						<div>
+							informações de contato (email, telefone, whatsapp)
+						</div>
 						<div className='flex'>
 							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Pisos</Link>
 							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Rodapés</Link>

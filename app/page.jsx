@@ -8,19 +8,17 @@ import Socials from '../components/socials'
 
 export default function Home() {
 	const slides = [
-		{ img: '/header_1.jpg' },
-		{ img: '/header_2.jpg' },
-		{ img: '/header_3.jpg' },
-		{ img: '/header_4.jpg' },
-		{ img: '/header_5.jpg' }
+		{ img: '/home/slideshow/slide_1.png' },
+		{ img: '/home/slideshow/slide_2.png' },
+		{ img: '/home/slideshow/slide_3.png' },
 	];
 
   return (
 		<>
 			{/* INTRODUÇÃO */}
 			<Intro className='relative' img='home/hero-background.jpg'>
-				<div className='grid grid-rows-6 grid-rows-7 md:grid-rows-5 md:grid-cols-7 w-full h-full'>
-					<div className='flex flex-col gap-4 justify-end row-start-1 row-span-2 md:col-start-2 md:row-start-3 md:col-span-3 md:row-span-2 p-4 text-center md:text-right'>
+				<div className='grid grid-rows-7 md:grid-rows-5 md:grid-cols-8 w-full h-full'>
+					<div className='flex flex-col gap-4 justify-end row-start-1 row-span-2 md:col-start-2 md:col-span-2 md:row-span-4 p-4 text-center md:text-right'>
 						<h1 className='text-6xl'>Titulo</h1>
 						<h2 className='text-xl'>
 							Somos uma empresa especializada em transformar espaços através de pisos de alta qualidade e decorações sob medida. 
@@ -33,11 +31,11 @@ export default function Home() {
 						</h2>
 					</div>
 
-					<div className='hidden md:flex flex-col items-center justify-center row-start-7 row-span-1 bg-base-100 md:row-start-5 md:col-span-4 md:row-span-1 p-4 text-xl text-center'>
+					<div className='hidden md:flex flex-col items-center justify-center row-start-7 row-span-1 bg-base-100 md:row-start-5 md:col-span-3 md:row-span-1 p-4 text-xl text-center'>
 						<Socials />
 					</div>
 
-					<div className='row-start-3 row-span-4 md:col-start-5 md:col-span-3 md:row-span-full overflow-hidden'>
+					<div className='row-start-3 row-span-4 md:col-start-4 md:col-span-5 md:row-span-full overflow-hidden'>
 						<ImageSlider slides={slides} parentWidth={500} />		
 					</div>
 				</div>
