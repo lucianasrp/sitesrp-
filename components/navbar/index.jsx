@@ -14,7 +14,7 @@ export default function Navbar({ className, src, children }) {
 
 	return (
 		<>
-			<nav className={`fixed w-full p-0 z-[100] bg-base-100 ${className}`}>
+			<nav className={`fixed md:relative w-full p-0 z-[100] bg-base-100 ${className}`}>
 				<container className={`w-full mx-auto grid grid-cols-5 md:grid-cols-8`}>
 					<Link className='col-span-2 bg-primary p-2 lg:p-5' href='/'>
 						<img
@@ -28,9 +28,12 @@ export default function Navbar({ className, src, children }) {
 													transition-all duration-500 ease-in-out font-bold z-50'>
 						<Socials className='hidden lg:flex' />
 						<div className='flex'>
-							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Menu 1</Link>
-							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Menu 2</Link>
-							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Menu 3</Link>
+							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Pisos</Link>
+							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Rodapés</Link>
+							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Instalações</Link>
+							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Menu 4</Link>
+							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Menu 5</Link>
+							<Link href='#' className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>Menu 6</Link>
 						</div>
 					</div>
 					<div className='col-span-3 
