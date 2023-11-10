@@ -33,7 +33,7 @@ export default function Home() {
 						</h2>
 					</div>
 
-					<div className='flex flex-col justify-center row-start-7 row-span-1 bg-base-100 md:row-start-5 md:col-span-4 md:row-span-1 p-4 text-xl text-center'>
+					<div className='hidden md:flex flex-col items-center justify-center row-start-7 row-span-1 bg-base-100 md:row-start-5 md:col-span-4 md:row-span-1 p-4 text-xl text-center'>
 						<Socials />
 					</div>
 
