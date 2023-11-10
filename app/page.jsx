@@ -53,7 +53,7 @@ export default function Home() {
 
 			{ /* FORNECEDORES */}
 			<Section Section className='relative bg-primary overflow-hidden text-center' >
-				nonono3
+				espaço reservado para fornecedores ou clientes
 			</Section >
 
 			{/* CALL TO ACTION */}
