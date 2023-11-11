@@ -3,6 +3,9 @@ import './globals.css'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import Whatsapp from '../components/whatsapp'
+import Section from '../components/section'
+import OpenStreetMap from '../components/openstreetmap'
+import Suppliers from '../components/suppliers'
 
 export const metadata = {
   title: 'Create Next App',
@@ -19,6 +22,17 @@ export default function RootLayout({ children }) {
           {children}
         </div>
 
+				{ /* FORNECEDORES */}
+				<Section Section className='relative bg-primary text-center' >
+					<Suppliers />
+				</Section >
+
+				{/* CALL TO ACTION */}
+
+				{/* MAPA */}
+				<div className='gmap_canvas dui-hero min-h-[384px]'>
+					<OpenStreetMap lat={-22.345084517418233} lon={-47.1692419052124} zoom={19} />
+				</div>
         <Footer src='/logo.svg'></Footer>
         <Whatsapp />
       </body>

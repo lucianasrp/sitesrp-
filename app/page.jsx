@@ -8,9 +8,9 @@ import Socials from '../components/socials'
 
 export default function Home() {
 	const slides = [
-		{ img: '/home/slideshow/slide_1.png' },
-		{ img: '/home/slideshow/slide_2.png' },
-		{ img: '/home/slideshow/slide_3.png' },
+		{ img: '/home/slideshow/slide_1.png', alt:'' },
+		{ img: '/home/slideshow/slide_2.png', alt:'' },
+		{ img: '/home/slideshow/slide_3.png', alt:'' },
 	];
 
   return (
@@ -50,18 +50,6 @@ export default function Home() {
 			<Section Section className='relative  overflow-hidden text-center' >
 				nonono2
 			</Section >
-
-			{ /* FORNECEDORES */}
-			<Section Section className='relative bg-primary overflow-hidden text-center' >
-				espaço reservado para fornecedores ou clientes
-			</Section >
-
-			{/* CALL TO ACTION */}
-
-			{/* MAPA */}
-			<div className='gmap_canvas dui-hero min-h-[384px]'>
-				<OpenStreetMap lat={-22.345084517418233} lon={-47.1692419052124} zoom={19} />
-			</div>
 		</>
   )
 }
