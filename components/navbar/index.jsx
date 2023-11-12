@@ -1,20 +1,37 @@
 'use client';
-import Section from '../section'
+import Link from 'next/link';
+import { usePathname, useSearchParams } from 'next/navigation'
+import { useState, useEffect } from "react";
+
+import Section from '../section';
 import Socials from '../socials';
 import { CONTACT } from '../../config/contact'
-import Image from 'next/image'
-import Link from 'next/link';
-import { useEffect, useState } from "react";
 
 const navmenu = [
 	{ label: 'Produtos', href: '/produtos' },
 	{ label: 'Serviços', href: '/servicos' },
 	{ label: 'Obras Realizadas', href: '/obras-realizadas' },
-	{ label: 'Quem Somos', href: 'quem-somos' },
-	{ label: 'Contato', href: 'contato' },
+	{ label: 'Quem Somos', href: '/quem-somos' },
+	{ label: 'Contato', href: '/contato' },
 ];
 
 export default function Navbar({ className, src, children }) {
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
+ 
+  useEffect(() => {
+    const url = `${pathname}`
+    console.log(url)
+  }, [pathname, searchParams])
+	
+	/*
+	const router = useRouter()
+	const [current, setCurrent] = useState(router.pathname);
+	useEffect ( () => {
+		setCurrent(router.pathname)
+	}, [router.pathname])
+	*/
+
 	const [currentState, setCurrentState] = useState(false);
 	function ToggleMenu() {
 		const newState = !currentState;
@@ -24,7 +41,7 @@ export default function Navbar({ className, src, children }) {
 	return (
 		<>
 			<nav className={`fixed md:relative w-full p-0 z-[100] bg-base-100 ${className}`}>
-				<container className={`w-full mx-auto grid grid-cols-5 md:grid-cols-8`}>
+				<div className={`container w-full mx-auto grid grid-cols-5 md:grid-cols-8`}>
 					<Link className='col-span-2 bg-primary p-2 lg:p-5' href='/'>
 						<img
 							className='ml-auto h-10 lg:h-24'
@@ -53,7 +70,19 @@ export default function Navbar({ className, src, children }) {
 							</Link>
 						</div>
 						<div className='flex'>
-							{ navmenu.map((item, index) => <Link key={index} href={item.href} title={item.label} className='border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4'>{item.label}</Link>) }
+							{ 
+								navmenu.map((item, index) => {
+									const currentPatyArray = pathname.split('/')[1];
+
+									let isSelected = false;
+									if(currentPatyArray.length > 1)
+										isSelected = (`/${pathname.split('/')[1]}` === item.href);
+
+									return (
+										<Link key={index} href={item.href} title={item.label} className={`border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4 ${(isSelected ? 'bg-primary border-primary' : '')}`}>{item.label}</Link>
+									)
+								}) 
+							}
 						</div>
 					</div>
 					<div className='col-span-3 
@@ -63,7 +92,7 @@ export default function Navbar({ className, src, children }) {
 							<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
 						</div>
 					</div>
-				</container>
+				</div>
 			</nav>
 			<div className='fixed flex md:hidden flex-col items-center justify-center w-full h-full z-40 gap-6 backdrop-blur-md bg-white/30 transition-all duration-500' style={{top: (currentState ? '0%' : '-100%')}}>
 				<div className='flex flex-col items-center max-h-[60vh] overflow-y-auto w-full text-2xl font-bold gap-4'>

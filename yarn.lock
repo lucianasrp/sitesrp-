@@ -1659,6 +1659,13 @@ next@^14.0.2-canary.12:
     "@next/swc-win32-ia32-msvc" "14.0.2-canary.12"
     "@next/swc-win32-x64-msvc" "14.0.2-canary.12"
 
+nextjs-router@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/nextjs-router/-/nextjs-router-1.0.2.tgz"
+  integrity sha512-C82LHsr8PeR1Jvai5KuPsCa/ZIJU6ewXhUqOmDy6IJq8uJ3lr+1B29ltofj3m5KYj7veOlEZXgCe1hdhvmSlLA==
+  dependencies:
+    rfr "^1.2.3"
+
 node-releases@^2.0.12:
   version "2.0.13"
   resolved "https://registry.npmjs.org/node-releases/-/node-releases-2.0.13.tgz"
@@ -2019,6 +2026,11 @@ reusify@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/reusify/-/reusify-1.0.4.tgz"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
+
+rfr@^1.2.3:
+  version "1.2.3"
+  resolved "https://registry.npmjs.org/rfr/-/rfr-1.2.3.tgz"
+  integrity sha512-Gl3u6jz9Rcn94Ep+8YjVTf+ajMDG5ndhZtcOPU8efGfJK34dBKtvRS32NEVN+x+dZsMSIVGw3ePvNqFn/v2D3Q==
 
 rimraf@^3.0.2:
   version "3.0.2"

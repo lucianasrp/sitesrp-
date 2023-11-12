@@ -1,3 +1,4 @@
+import Breadcrumbs from "../../components/breadcrumbs";
 import Section from "../../components/section";
 import Suppliers from "../../components/suppliers";
 
@@ -7,6 +8,7 @@ export default function Page() {
 			{/* HEADER */}
 			<Section>
 				<h1 className='text-6xl'>QUEM SOMOS</h1>
+				<Breadcrumbs />
 			</Section>
 			
 			<Section>
