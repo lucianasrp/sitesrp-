@@ -25,7 +25,7 @@ export default function RootLayout({ children }) {
 
 				{/* CALL TO ACTION */}
 				<CallToAction img='/call_to_action.webp' background='/background_pattern.webp' url={`https://wa.me/`}>
-					<h1 className='mb-5 text-5xl'>Solicite uma Orçamento!</h1>
+					<h1 className='mb-5 text-5xl'>Solicite um Orçamento!</h1>
 					<h3 className='mb-5'>Transforme seu espaço conosco.<br />Solicite um orçamento personalizado hoje!!</h3>
 				</CallToAction>
 
