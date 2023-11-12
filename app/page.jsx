@@ -9,17 +9,17 @@ import Suppliers from '../components/suppliers'
 
 export default function Home() {
 	const slides = [
-		{ img: '/home/slideshow/slide_1.png', alt:'' },
-		{ img: '/home/slideshow/slide_2.png', alt:'' },
-		{ img: '/home/slideshow/slide_3.png', alt:'' },
-		{ img: '/home/slideshow/slide_4.png', alt:'' },
-		{ img: '/home/slideshow/slide_5.png', alt:'Aplicando Papel de Parede' },
+		{ img: '/home/slideshow/slide_1.webp', alt:'' },
+		{ img: '/home/slideshow/slide_2.webp', alt:'' },
+		{ img: '/home/slideshow/slide_3.webp', alt:'' },
+		{ img: '/home/slideshow/slide_4.webp', alt:'' },
+		{ img: '/home/slideshow/slide_5.webp', alt:'Aplicando Papel de Parede' },
 	];
 
   return (
 		<>
 			{/* INTRODUÇÃO */}
-			<Intro className='relative' img='home/hero-background.jpg'>
+			<Intro className='relative' img='/background_pattern.webp'>
 				<div className='grid grid-rows-7 md:grid-rows-5 md:grid-cols-8 w-full h-full'>
 					<div className='flex flex-col gap-4 justify-end row-start-1 row-span-2 md:col-start-2 md:col-span-2 md:row-span-4 p-4 text-center md:text-right'>
 						<h1 className='hidden md:block text-6xl'>Bem-Vindo</h1>

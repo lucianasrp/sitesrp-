@@ -1,16 +1,16 @@
 export default function Suppliers() {
 	const suppliers = [
-		{ img: '/fornecedores/logo_arquitech.png', label: 'Arquitech', href: '#' },
+		{ img: '/fornecedores/logo_arquitech.webp', label: 'Arquitech', href: '#' },
 		{ img: '/fornecedores/logo_bauxita.webp', label: 'Bauxita', href: '#' },
-		{ img: '/fornecedores/logo_belgotex.svg', label: 'Belgotex', href: '#' },
-		{ img: '/fornecedores/logo_daud.png', label: 'Daud', href: '#' },
-		{ img: '/fornecedores/logo_dipiso.png', label: 'Dipiso', href: '#' },
+		{ img: '/fornecedores/logo_belgotex.webp', label: 'Belgotex', href: '#' },
+		{ img: '/fornecedores/logo_daud.webp', label: 'Daud', href: '#' },
+		{ img: '/fornecedores/logo_dipiso.webp', label: 'Dipiso', href: '#' },
 		{ img: '/fornecedores/logo_erbus.webp', label: 'Erbus', href: '#' },
-		{ img: '/fornecedores/logo_eucafloor.png', label: 'Eucafloor', href: '#' },
+		{ img: '/fornecedores/logo_eucafloor.webp', label: 'Eucafloor', href: '#' },
 		{ img: '/fornecedores/logo_kasfloor.webp', label: 'Kasfloor', href: '#' },
-		{ img: '/fornecedores/logo_madebene.png', label: 'Madepene', href: '#' },
-		{ img: '/fornecedores/logo_santaluzia.png', label: 'Santaluzia', href: '#' },
-		{ img: '/fornecedores/logo_tarkett.svg', label: 'Tarkett', href: '#' },
+		{ img: '/fornecedores/logo_madebene.webp', label: 'Madepene', href: '#' },
+		{ img: '/fornecedores/logo_santaluzia.webp', label: 'Santaluzia', href: '#' },
+		{ img: '/fornecedores/logo_tarkett.webp', label: 'Tarkett', href: '#' },
 	];
 	
 	return(
