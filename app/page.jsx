@@ -53,14 +53,38 @@ export default function Home() {
 			<Section className='relative overflow-hidden' >
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
 
-					<div className='dui-card h-96 border border-solid'>
+					<div className='dui-card border border-solid'>
 						<div className="dui-card-body flex flex-col justify-start p-10 gap-4">
 							<div>
 								<svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
 							</div>
-							<h2 className='dui-card-title'>Serviço 1</h2>
+							<h2 className='dui-card-title'>Instalação</h2>
 							<div>
-								<h3>loren</h3>
+								<p>Nossa expertise em Instalação de Pisos e Revestimentos abrange uma ampla variedade de opções, desde Pisos Laminados e Pisos de Madeira até Pisos Vinílicos e muito mais. Com mais de 9 anos de experiência no mercado, nossa equipe altamente qualificada assegura a instalação de alta qualidade, proporcionando ambientes duradouros e esteticamente agradáveis.</p>
+							</div>
+						</div>
+					</div>
+
+					<div className='dui-card border border-solid'>
+						<div className="dui-card-body flex flex-col justify-start p-10 gap-4">
+							<div>
+								<svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+							</div>
+							<h2 className='dui-card-title'>Manutenção</h2>
+							<div>
+								<p>Mantenha seus pisos em perfeitas condições com nossos serviços de Manutenção de Pisos. Oferecemos soluções de limpeza e impermeabilização, incluindo Limpeza de Piso Vinílico, para garantir a longevidade e a beleza de seus pisos. Deixe-nos cuidar da manutenção para que você possa desfrutar de um espaço impecável.</p>
+							</div>
+						</div>
+					</div>
+
+					<div className='dui-card border border-solid'>
+						<div className="dui-card-body flex flex-col justify-start p-10 gap-4">
+							<div>
+								<svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 512 512"><path d="M47.6 300.4L228.3 469.1c7.5 7 17.4 10.9 27.7 10.9s20.2-3.9 27.7-10.9L464.4 300.4c30.4-28.3 47.6-68 47.6-109.5v-5.8c0-69.9-50.5-129.5-119.4-141C347 36.5 300.6 51.4 268 84L256 96 244 84c-32.6-32.6-79-47.5-124.6-39.9C50.5 55.6 0 115.2 0 185.1v5.8c0 41.5 17.2 81.2 47.6 109.5z"/></svg>
+							</div>
+							<h2 className='dui-card-title'>Venda</h2>
+							<div>
+								<p>Explore nossa ampla gama de produtos de alta qualidade para aprimorar seus espaços. Oferecemos desde Pisos Laminados, Pisos de Madeira e Pisos Vinílicos até Lustres, Papel de Parede, Persianas e muito mais. Garantimos a disponibilidade dos melhores produtos e acessórios para atender às suas necessidades de decoração e design.</p>
 							</div>
 						</div>
 					</div>
