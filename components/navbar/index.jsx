@@ -73,9 +73,14 @@ export default function Navbar({ className, src, children }) {
 					<div className='col-span-3 
 													flex md:hidden flex-row items-center justify-end gap-4 p-2
 													transition-all duration-500 ease-in-out font-bold'>
-						<div className='flex w-8 h-8 items-center justify-center cursor-pointer' onClick={ToggleMenu}>
-							<svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/></svg>
-						</div>
+						<label className="dui-btn dui-btn-circle dui-btn-ghost dui-swap dui-swap-rotate">
+							{/* this hidden checkbox controls the state */}
+							<input type="checkbox" onChange={ToggleMenu} />
+							{/* hamburger icon */}
+							<svg className="dui-swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>								
+							{/* close icon */}
+							<svg className="dui-swap-on fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><polygon points="400 145.49 366.51 112 256 222.51 145.49 112 112 145.49 222.51 256 112 366.51 145.49 400 256 289.49 366.51 400 400 366.51 289.49 256 400 145.49"/></svg>
+						</label>
 					</div>
 				</div>
 			</nav>
