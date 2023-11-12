@@ -1,9 +1,12 @@
+import Title from "../../../components/title";
+import Section from "../../../components/section";
+
 export async function getStaticPaths() {
 	const paths = [];
 
 	paths.push({
 		params: {
-			slug: 'aeiou'
+			slug: 'tapetes'
 		}
 	});
 
@@ -14,9 +17,10 @@ export async function getStaticPaths() {
 }
 
 export default async function Home({ params }) {
-  return ( 
+	return(
 		<>
-			<h1>teste ^^</h1>
-		</> 
+			{/* TITLE */}
+			<Title>{params.slug}</Title>
+		</>
 	)
 }

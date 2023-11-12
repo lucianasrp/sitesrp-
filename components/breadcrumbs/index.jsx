@@ -1,22 +1,30 @@
 'use client'
 
 import Link from 'next/link';
-import { usePathname, useSearchParams } from 'next/navigation'
-import { useState, useEffect } from "react";
+import { usePathname } from 'next/navigation'
 
-export default function Breadcrumbs({ background, img, url, children }) {
-  const pathName = usePathname();
-	const pathArray = pathName.split('/');
+export default function Breadcrumbs() {
+	const pathName = usePathname();
+	const pathNames = pathName.split('/').filter( path => path );
 
 	return (
 		<>
-			{/*<div className="text-sm dui-breadcrumbs">
+			<div className="text-sm dui-breadcrumbs">
 				<ul>
-					<li><a>Home</a></li> 
-					<li><a>Documents</a></li> 
-					<li>Add Document</li>
+					<li><Link href='/'>home</Link></li> 
+					{
+						pathNames.map((item, index) => {
+							const href = `/${pathNames.slice(0, index + 1).join('/')}`
+							let label = item.split('-').join(' ').toLowerCase();
+
+							if ( index + 1 === pathNames.length )
+								return( <li key={index}>{label}</li> )
+							else
+								return( <li key={index}><Link href={href}>{label}</Link></li> )
+						})
+					}
 				</ul>
-			</div>*/}
+			</div>
 		</>
 	)
 }

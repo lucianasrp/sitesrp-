@@ -1,16 +1,14 @@
-import Breadcrumbs from "../../components/breadcrumbs";
+
+import Title from "../../components/title";
 import Section from "../../components/section";
 import Suppliers from "../../components/suppliers";
 
 export default function Page() {
 	return(
 		<>
-			{/* HEADER */}
-			<Section>
-				<h1 className='text-6xl'>QUEM SOMOS</h1>
-				<Breadcrumbs />
-			</Section>
-			
+			{/* TITLE */}
+			<Title>QUEM SOMOS</Title>
+						
 			<Section>
 				<div className='flex flex-col md:flex-row gap-8'>
 					{/* FOTO DA EQUIPE OU ESCRITÓRIO */}

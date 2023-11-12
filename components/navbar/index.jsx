@@ -16,22 +16,9 @@ const navmenu = [
 ];
 
 export default function Navbar({ className, src, children }) {
-  const pathname = usePathname()
-  const searchParams = useSearchParams()
- 
-  useEffect(() => {
-    const url = `${pathname}`
-    console.log(url)
-  }, [pathname, searchParams])
+  const pathName = usePathname();
+	const pathNames = pathName.split('/').filter( path => path );
 	
-	/*
-	const router = useRouter()
-	const [current, setCurrent] = useState(router.pathname);
-	useEffect ( () => {
-		setCurrent(router.pathname)
-	}, [router.pathname])
-	*/
-
 	const [currentState, setCurrentState] = useState(false);
 	function ToggleMenu() {
 		const newState = !currentState;
@@ -41,7 +28,7 @@ export default function Navbar({ className, src, children }) {
 	return (
 		<>
 			<nav className={`fixed md:relative w-full p-0 z-[100] bg-base-100 ${className}`}>
-				<div className={`container w-full mx-auto grid grid-cols-5 md:grid-cols-8`}>
+				<div className={`w-full mx-auto grid grid-cols-5 md:grid-cols-8`}>
 					<Link className='col-span-2 bg-primary p-2 lg:p-5' href='/'>
 						<img
 							className='ml-auto h-10 lg:h-24'
@@ -72,11 +59,9 @@ export default function Navbar({ className, src, children }) {
 						<div className='flex'>
 							{ 
 								navmenu.map((item, index) => {
-									const currentPatyArray = pathname.split('/')[1];
-
 									let isSelected = false;
-									if(currentPatyArray.length > 1)
-										isSelected = (`/${pathname.split('/')[1]}` === item.href);
+									if(pathNames.length > 0)
+										isSelected = (`/${pathNames[0]}` === item.href);
 
 									return (
 										<Link key={index} href={item.href} title={item.label} className={`border-solid border-b-2 border-base-100 hover:border-primary px-8 py-4 ${(isSelected ? 'bg-primary border-primary' : '')}`}>{item.label}</Link>
