@@ -23,10 +23,10 @@ module.exports = {
       {
         mytheme: {
           "primary": "#FBBA00",
-          "secondary": "#374FA5",
+          "secondary": "#00000",
           "accent": "#1FB2A5",
           "neutral": "#24272e",
-          "base-100": "#FDF9E3",
+          "base-100": "#FFFFFF",
           "info": "#3ABFF8",
           "success": "#36D399",
           "warning": "#FBBD23",

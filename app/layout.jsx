@@ -5,6 +5,7 @@ import Footer from '../components/footer'
 import Whatsapp from '../components/whatsapp'
 import Section from '../components/section'
 import OpenStreetMap from '../components/openstreetmap'
+import CallToAction from '../components/calltoaction'
 import Suppliers from '../components/suppliers'
 
 export const metadata = {
@@ -22,12 +23,11 @@ export default function RootLayout({ children }) {
           {children}
         </div>
 
-				{ /* FORNECEDORES */}
-				<Section Section className='relative bg-primary text-center' >
-					<Suppliers />
-				</Section >
-
 				{/* CALL TO ACTION */}
+				<CallToAction img='/call_to_action.png' background='/home/hero-background.jpg' url={`https://wa.me/`}>
+					<h1 className='mb-5 text-5xl'>Solicite uma Orçamento!</h1>
+					<h3 className='mb-5'>Transforme seu espaço conosco.<br />Solicite um orçamento personalizado hoje!!</h3>
+				</CallToAction>
 
 				{/* MAPA */}
 				<div className='gmap_canvas dui-hero min-h-[384px]'>

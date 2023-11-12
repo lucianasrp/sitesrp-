@@ -3,14 +3,13 @@ export default function CallToAction({ background, img, url, children }) {
 
 	return (
 		<>
-			<div className='dui-hero min-h-[512px] bg-base-200 bg-fixed' style={{ backgroundImage: `url('${background}')` }}>
-				<div className='dui-hero-overlay bg-opacity-80'></div>
+			<div className='dui-hero min-h-[512px] bg-base-200 bg-fixed overflow-hidden' style={{ backgroundImage: `url('${background}')` }}>
 				<div className='dui-hero-content flex-row md:pb-0'>
 					<img src={img} className='hidden md:block max-w-sm' />
-					<div className='dui-hero-content text-center text-neutral-content'>
+					<div className='dui-hero-content text-center text-content'>
 						<div className='max-w-md'>
 							{children}
-							<a href={url} className='dui-btn dui-btn-primary'>Fale Conosco!</a>
+							<a href={url} className='dui-btn dui-btn-secondary'>Fale Conosco!</a>
 						</div>
 					</div>
 				</div>
