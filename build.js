@@ -3,14 +3,7 @@ const http = require('http');
 const https = require('https');
 const webp = require('webp-converter');
 const papa = require('papaparse');
-//import fs from 'fs';
-/*
-import http from 'http';
-import https from 'https';
-import webp from 'webp-converter';
-
-import { parse } from 'papaparse';
-*/
+const { split } = require('postcss/lib/list');
 
 async function getData() {
 	if (!fs.existsSync(`public/produtos`))
@@ -24,12 +17,14 @@ async function getData() {
 	// criar estrutura de diretório dos itens
 	for (const product of products.data) {
 		const path = `public/produtos/${product[5]}`;
-		if (!fs.existsSync(path))
-			fs.mkdirSync(path);
 
 		// baixar a imagem do item
 		if(product[4]) {
-			const file = fs.createWriteStream(`${path}/file.jpg`);
+			if (!fs.existsSync(path))
+				fs.mkdirSync(path);
+
+			const ext = split(product[4], '.').slice(-1);
+			const file = fs.createWriteStream(`${path}/file.${ext}`);
 			const request = https.get(product[4], function(response) {
 				//console.log(response)
 
@@ -46,10 +41,13 @@ async function getData() {
 				file.on('finish', () => {
 					file.close();
 					console.log(`${path} -> download finalizado`);
+
+					const result = webp.cwebp(`${path}/file.${ext}`, `${path}/file.webp`,"-q 80",logging="-v");
+					result.then((response) => {
+						console.log(response);
+					})
 				})
 			})
-
-			//webp.cwebp(`${path}/file.jpg`, `${path}/file.webp`, "-q 80");
 		}
 	}
 
