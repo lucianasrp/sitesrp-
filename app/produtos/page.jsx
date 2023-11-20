@@ -50,7 +50,7 @@ export default async function ProductsPage() {
 				<div>
 					espaço para filtro por tipo de item (piso vilinico, piso laminado, acessório, rodapé e etc)
 				</div>
-				<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4'>
+				<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 					{ data.products.map((item, index) => 
 						<>
 							<a className='' key={index} href='#'>
