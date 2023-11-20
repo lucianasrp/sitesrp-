@@ -1,9 +1,11 @@
 'use server'
 
 import fs from 'fs';
+/*
 import http from 'http';
 import https from 'https';
 import webp from 'webp-converter';
+*/
 
 import Title from "../../components/title";
 import Section from "../../components/section";
@@ -55,8 +57,8 @@ async function getData() {
 	return products;
 }
 
-export default async function Page() {
-	const data = await getData()
+export default async function ProductsPage() {
+	//const data = await getData()
 
 	return(
 		<>
