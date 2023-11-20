@@ -4,10 +4,6 @@ import Section from "../../../components/section";
 
 export async function getStaticPaths() {
 	// abrir e de itens
-	const productsText = fs.readFile('private/produtos.tsv');
-	const products = Papa.parse(productsText);
-
-	console.log(products);
 
 	// criar estrutura de diretório dos itens
 
