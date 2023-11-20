@@ -41,7 +41,7 @@ async function getData() {
 function Card({ img, children }) {
 	return (
 		<>
-			<div className='dui-card min-h-full bg-base-100 shadow-md'>
+			<div className='dui-card min-h-full bg-base-100 border border-solid'>
 				<figure className='max-h-32 overflow-hidden'><img className='min-h-[8rem]' src={img} /></figure>
 				<div className='flex dui-card-body p-4'>
 					{children}
