@@ -15,6 +15,7 @@ async function getData() {
 
 	// criar estrutura de diretório dos itens
 	for (const product of products.data) {
+		return 'nnnn';
 		const path = `public/produtos/${product[5]}`;
 		if (!fs.existsSync(path))
 			fs.mkdirSync(path);
