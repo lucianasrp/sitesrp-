@@ -1,7 +1,7 @@
 import fs from 'fs';
 import http from 'http';
 import https from 'https';
-import webp from 'webp-converter';
+//import webp from 'webp-converter';
 
 import Title from "../../components/title";
 import Section from "../../components/section";
