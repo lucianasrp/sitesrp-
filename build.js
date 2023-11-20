@@ -1,11 +1,16 @@
-import fs from 'fs';
+const fs = require('fs');
+const http = require('http');
+const https = require('https');
+const webp = require('webp-converter');
+const papa = require('papaparse');
+//import fs from 'fs';
+/*
 import http from 'http';
 import https from 'https';
-//import webp from 'webp-converter';
+import webp from 'webp-converter';
 
-import Title from "../../components/title";
-import Section from "../../components/section";
 import { parse } from 'papaparse';
+*/
 
 async function getData() {
 	if (!fs.existsSync(`public/produtos`))
@@ -52,16 +57,6 @@ async function getData() {
 	return products;
 }
 
-export default async function ProductsPage() {
-	const data = await getData()
+getData();
 
-	return(
-		<>
-			{/* TITLE */}
-			<Title>PRODUTOS</Title>
-			<div>
-				{/*JSON.stringify(data)*/}
-			</div>
-		</>
-	)
-}
+console.log('teste');
