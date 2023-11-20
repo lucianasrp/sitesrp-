@@ -1,14 +1,14 @@
 import fs from 'fs';
 import http from 'http';
 import https from 'https';
-//import webp from 'webp-converter';
+import webp from 'webp-converter';
 
 import Title from "../../components/title";
 import Section from "../../components/section";
 import { parse } from 'papaparse';
 
 async function getData() {
-		// abrir e de itens
+	// abrir e de itens
 	const buffer = fs.readFileSync('private/produtos.tsv');
 	const productsData = buffer.toString();
 	const products = parse(productsData.substring(productsData.indexOf("\n") + 1));
@@ -41,7 +41,7 @@ async function getData() {
 				})
 			})
 
-			//webp.cwebp(`${path}/file.jpg`, `${path}/file.webp`, "-q 80");
+			webp.cwebp(`${path}/file.jpg`, `${path}/file.webp`, "-q 80");
 		}
 	}
 
@@ -50,14 +50,14 @@ async function getData() {
 }
 
 export default async function ProductsPage() {
-	//const data = await getData()
+	const data = await getData();
 
 	return(
 		<>
 			{/* TITLE */}
 			<Title>PRODUTOS</Title>
 			<div>
-				{/*JSON.stringify(data)*/}
+				{JSON.stringify(data)}
 			</div>
 		</>
 	)
