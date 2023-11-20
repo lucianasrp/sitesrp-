@@ -1,17 +1,14 @@
 import fs from 'fs';
-/*
 import http from 'http';
 import https from 'https';
-import webp from 'webp-converter';
-*/
+//import webp from 'webp-converter';
 
 import Title from "../../components/title";
 import Section from "../../components/section";
 import { parse } from 'papaparse';
 
 async function getData() {
-	return null;
-	// abrir e de itens
+		// abrir e de itens
 	const buffer = fs.readFileSync('private/produtos.tsv');
 	const productsData = buffer.toString();
 	const products = parse(productsData.substring(productsData.indexOf("\n") + 1));
@@ -48,10 +45,7 @@ async function getData() {
 		}
 	}
 
-	
-
 	// adicionar os itens em seus paths
-
 	return products;
 }
 
