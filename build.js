@@ -32,7 +32,7 @@ async function getData() {
 					file.close();
 					console.log(`${path} -> download finalizado`);
 
-					const result = webp.cwebp(`${path}/file.${ext}`, `${path}/file.webp`,"-q 80",logging="-v");
+					const result = webp.cwebp(`${path}/file.${ext}`, `${path}/photo.webp`,"-q 80",logging="-v");
 					result.then((response) => {
 						console.log(response);
 						fs.rmSync(`${path}/file.${ext}`);
