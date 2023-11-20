@@ -3,6 +3,17 @@ import { parse } from 'papaparse';
 import Title from "../../components/title";
 import Section from "../../components/section";
 
+function slugify(str) {
+  return String(str)
+    .normalize('NFKD') // split accented characters into their base characters and diacritical marks
+    .replace(/[\u0300-\u036f]/g, '') // remove all the accents, which happen to be all in the \u03xx UNICODE block.
+    .trim() // trim leading or trailing whitespace
+    .toLowerCase() // convert to lowercase
+    .replace(/[^a-z0-9 -]/g, '') // remove non-alphanumeric characters
+    .replace(/\s+/g, '-') // replace spaces with hyphens
+    .replace(/-+/g, '-'); // remove consecutive hyphens
+}
+
 async function getData() {
 	if (!fs.existsSync(`public/produtos`))
 		fs.mkdirSync(`public/produtos`);
@@ -31,7 +42,7 @@ function Card({ img, children }) {
 		<>
 			<div className='dui-card min-h-full bg-base-100 shadow-md'>
 				<figure className='max-h-32 overflow-hidden'><img className='min-h-[8rem]' src={img} /></figure>
-				<div className='dui-card-body'>
+				<div className='flex dui-card-body p-4'>
 					{children}
 				</div>
 			</div>
@@ -53,12 +64,13 @@ export default async function ProductsPage() {
 				<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 					{ data.products.map((item, index) => 
 						<>
-							<a className='' key={index} href='#'>
+							<a className='' key={index} href={`/produtos/${slugify(item[0])}`}>
 								<Card img={`/produtos/${item[5]}/photo.webp`}>
 									<h3 className='dui-card-title text-base'>{item[0]}</h3>
-									<div>
-										<p>{item[1]}</p>
-										<p>{item[2]}</p>
+
+									<div className=" flex-1 dui-card-actions justify-end">
+										<div className="dui-badge dui-badge-outline">{item[1]}</div> 
+										<div className="dui-badge dui-badge-outline">{item[2]}</div>
 									</div>
 								</Card>
 							</a>
