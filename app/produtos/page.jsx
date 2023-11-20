@@ -70,8 +70,8 @@ export default async function ProductsPage() {
 									<h3 className='dui-card-title text-base'>{item[0]}</h3>
 
 									<div className=" flex-1 dui-card-actions justify-end">
-										<div className="dui-badge dui-badge-outline">{item[1]}</div> 
-										<div className="dui-badge dui-badge-outline">{item[2]}</div>
+										<div className="dui-badge dui-badge-primary">{item[1]}</div>
+										<div className="dui-badge dui-badge-neutral">{item[2]}</div>
 									</div>
 								</Card>
 							</Link>
