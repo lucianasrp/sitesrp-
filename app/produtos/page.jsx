@@ -63,7 +63,7 @@ export default async function ProductsPage() {
 			{/* TITLE */}
 			<Title>PRODUTOS</Title>
 			<div>
-				{JSON.stringify(data)}
+				{/*JSON.stringify(data)*/}
 			</div>
 		</>
 	)
