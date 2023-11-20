@@ -41,7 +41,7 @@ async function getData() {
 				})
 			})
 
-			webp.cwebp(`${path}/file.jpg`, `${path}/file.webp`, "-q 80");
+			//webp.cwebp(`${path}/file.jpg`, `${path}/file.webp`, "-q 80");
 		}
 	}
 
