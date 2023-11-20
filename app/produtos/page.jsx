@@ -57,7 +57,8 @@ export default async function ProductsPage() {
 								<Card img={`/produtos/${item[5]}/photo.webp`}>
 									<h3 className='dui-card-title text-base'>{item[0]}</h3>
 									<div>
-										<p></p>
+										<p>{item[1]}</p>
+										<p>{item[2]}</p>
 									</div>
 								</Card>
 							</a>
