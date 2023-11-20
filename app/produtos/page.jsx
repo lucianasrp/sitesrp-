@@ -2,6 +2,7 @@ import fs from 'fs';
 import { parse } from 'papaparse';
 import Title from "../../components/title";
 import Section from "../../components/section";
+import Link from 'next/link';
 
 function slugify(str) {
   return String(str)
@@ -64,7 +65,7 @@ export default async function ProductsPage() {
 				<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 					{ data.products.map((item, index) => 
 						<>
-							<a className='' key={index} href={`/produtos/${slugify(item[0])}`}>
+							<Link className='' key={index} href={`/produtos/${slugify(item[0])}`}>
 								<Card img={`/produtos/${item[5]}/photo.webp`}>
 									<h3 className='dui-card-title text-base'>{item[0]}</h3>
 
@@ -73,7 +74,7 @@ export default async function ProductsPage() {
 										<div className="dui-badge dui-badge-outline">{item[2]}</div>
 									</div>
 								</Card>
-							</a>
+							</Link>
 						</>
 					)}
 				</div>
