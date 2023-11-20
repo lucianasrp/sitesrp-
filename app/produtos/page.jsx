@@ -10,6 +10,7 @@ import Section from "../../components/section";
 import { parse } from 'papaparse';
 
 async function getData() {
+	return null;
 	// abrir e de itens
 	const buffer = fs.readFileSync('private/produtos.tsv');
 	const productsData = buffer.toString();
