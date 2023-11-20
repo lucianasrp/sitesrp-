@@ -26,16 +26,6 @@ async function getData() {
 			const ext = split(product[4], '.').slice(-1);
 			const file = fs.createWriteStream(`${path}/file.${ext}`);
 			const request = https.get(product[4], function(response) {
-				//console.log(response)
-
-				/*
-				let result = webp.buffer2webpbuffer(data,"jpg","-q 80");
-    		result.then(function(result) {
-      		// you access the value from the promise here
-      		//console.log(result)
-		    });
-				*/
-
 				response.pipe(file);
 
 				file.on('finish', () => {
@@ -45,6 +35,7 @@ async function getData() {
 					const result = webp.cwebp(`${path}/file.${ext}`, `${path}/file.webp`,"-q 80",logging="-v");
 					result.then((response) => {
 						console.log(response);
+						fs.rmSync(`${path}/file.${ext}`);
 					})
 				})
 			})
