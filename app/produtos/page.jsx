@@ -15,7 +15,6 @@ async function getData() {
 
 	// criar estrutura de diretório dos itens
 	for (const product of products.data) {
-		return 'nnnn';
 		const path = `public/produtos/${product[5]}`;
 		if (!fs.existsSync(path))
 			fs.mkdirSync(path);
@@ -51,14 +50,14 @@ async function getData() {
 }
 
 export default async function ProductsPage() {
-	const data = await getData();
+	//const data = await getData()
 
 	return(
 		<>
 			{/* TITLE */}
 			<Title>PRODUTOS</Title>
 			<div>
-				{JSON.stringify(data)}
+				{/*JSON.stringify(data)*/}
 			</div>
 		</>
 	)
