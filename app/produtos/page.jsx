@@ -26,6 +26,7 @@ async function getData() {
 	await Papa.parse(productsData.substring(productsData.indexOf("\n") + 1), {
 		worker: true,
 		step: function(results) {
+			results.data[3] = results.data[4] = '';
 			products.push(results.data);
 		}
 	});

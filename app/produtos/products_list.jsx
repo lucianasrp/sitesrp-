@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link"
 import ProductCard from "./product_card"
 
@@ -16,16 +18,11 @@ export default function ProductsList({products}) {
 	return (
 		<>
 			<div>
-				<div role="tablist" class="dui-tabs dui-tabs-bordered">
-					<input type="radio" name="my_tabs_1" role="tab" class="dui-tab" aria-label="Tab 1" />
-					<div role="tabpanel" class="dui-tab-content p-10">Tab content 1</div>
-
-					<input type="radio" name="my_tabs_1" role="tab" class="dui-tab" aria-label="Tab 2" checked />
-					<div role="tabpanel" class="dui-tab-content p-10">Tab content 2</div>
-
-					<input type="radio" name="my_tabs_1" role="tab" class="dui-tab" aria-label="Tab 3" />
-					<div role="tabpanel" class="dui-tab-content p-10">Tab content 3</div>
-				</div>
+				<form role="tablist" className="dui-tabs dui-tabs-boxed">
+					<input type="radio" name="my_tabs_1" role="tab" className="dui-tab" aria-label="Tab 1" checked />
+					<input type="radio" name="my_tabs_1" role="tab" className="dui-tab" aria-label="Tab 2" />
+					<input type="radio" name="my_tabs_1" role="tab" className="dui-tab" aria-label="Tab 3" />
+				</form>			
 			</div>
 			<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 				{ products.map((item, index) => 
