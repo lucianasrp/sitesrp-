@@ -47,7 +47,7 @@ export default function Home() {
 
 			{ /* SERVIÇOS */}
 			<Section className='relative overflow-hidden' >
-				<div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
+				<div className='flex flex-col md:grid md:grid-cols-3 gap-10'>
 					<Card img='/home/cards/instalacao.webp'>
 						<h2 className='dui-card-title'>Instalação</h2>
 						<div>
