@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { parse } from 'papaparse';
+import Papa from 'papaparse';
 import Title from "../../../components/title";
 import Section from "../../../components/section";
 import Link from 'next/link';
@@ -22,11 +22,21 @@ export async function getStaticPaths() {
 	// abrir e de itens
 	const buffer = fs.readFileSync('private/produtos.tsv');
 	const productsData = buffer.toString();
-	const products = parse(productsData.substring(productsData.indexOf("\n") + 1));
+
+	const products = [];
+	await Papa.parse(productsData.substring(productsData.indexOf("\n") + 1), {
+		worker: true,
+		step: function(results) {
+			products.push(results.data);
+		}
+	});
+
+
+	//const products = parse(productsData.substring(productsData.indexOf("\n") + 1));
 	const paths = [];
 
 	// criar estrutura de diretório dos itens
-	for (const product of products.data) {
+	for (const product of products) {
 		paths.push({
 			params: {
 				slug: slugify(product[0]),
@@ -49,20 +59,27 @@ export async function getStaticPaths() {
 async function getData({slug}) {
 	const buffer = fs.readFileSync('private/produtos.tsv');
 	const productsData = buffer.toString();
-	const products = parse(productsData.substring(productsData.indexOf("\n") + 1));
+	
+	const products = [];
+	await Papa.parse(productsData.substring(productsData.indexOf("\n") + 1), {
+		worker: true,
+		step: function(results) {
+			products.push(results.data);
+		}
+	});
 
 	const output = {
 		product: [],
 		suggestions: []
 	};
 
-	for( const product of products.data ) {
+	for( const product of products ) {
 		if( slugify(product[0]) === slug ) 
 			output.product = product;
 			//return product;
 	}
 
-	for( const product of products.data ) {
+	for( const product of products ) {
 		if( product[5] !== output.product[5] && product[2] === output.product[2] )
 			output.suggestions.push(product);
 	}

@@ -22,12 +22,11 @@ async function getData() {
 	const buffer = fs.readFileSync('private/produtos.tsv');
 	const productsData = buffer.toString();
 
-	let products = [];
+	const products = [];
 	await Papa.parse(productsData.substring(productsData.indexOf("\n") + 1), {
 		worker: true,
 		step: function(results) {
 			products.push(results.data);
-			console.log("Finished:", results.data);
 		}
 	});
 

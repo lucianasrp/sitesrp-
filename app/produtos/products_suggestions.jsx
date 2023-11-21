@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import ProductCard from "./product_card"
+import { useState, useEffect } from 'react'
 
 function slugify(str) {
   return String(str)
@@ -15,8 +16,12 @@ function slugify(str) {
 }
 
 export default function ProductsSuggestions({products}) {
-	const shuffled = products.sort(() => 0.5 - Math.random());
-	var selected = shuffled.slice(0, 1);
+	const [selected, setSelected] = useState([])
+	 
+	useEffect(() => {
+		const shuffled = products.sort(() => 0.5 - Math.random());
+		setSelected(shuffled.slice(0, 4));
+	}, [])
 
 	return (
 		<>
