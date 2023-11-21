@@ -16,7 +16,7 @@ function slugify(str) {
 
 export default function ProductsSuggestions({products}) {
 	const shuffled = products.sort(() => 0.5 - Math.random());
-	var selected = shuffled.slice(0, 4);
+	var selected = shuffled.slice(0, 1);
 
 	return (
 		<>
