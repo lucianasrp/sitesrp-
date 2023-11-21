@@ -18,11 +18,10 @@ export default function ProductsList({products}) {
 	return (
 		<>
 			<div>
-				<form role="tablist" className="dui-tabs dui-tabs-boxed">
-					<input type="radio" name="my_tabs_1" role="tab" className="dui-tab" aria-label="Tab 1" checked />
-					<input type="radio" name="my_tabs_1" role="tab" className="dui-tab" aria-label="Tab 2" />
-					<input type="radio" name="my_tabs_1" role="tab" className="dui-tab" aria-label="Tab 3" />
-				</form>			
+				<div className="dui-btn-group justify-center flex-wrap">
+					<button className="dui-btn dui-tab-bordered dui-btn-active">Todos</button>
+					{products.map((categoria, index) => <button key={index} className="dui-btn dui-tab-bordered capitalize">{categoria[2]}</button>)}
+				</div>
 			</div>
 			<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 				{ products.map((item, index) => 
