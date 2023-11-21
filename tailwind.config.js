@@ -18,9 +18,10 @@ module.exports = {
     utils: true,
     logs: true,
     rtl: false,
-		darkMode: "mytheme",
+		darkMode: 'class',
     prefix: "dui-",
-    themes: [
+		themes: ["cupcake", "cmyk"],
+    themeaaas: [
       {
         mytheme: {
           "primary": "#FBBA00",
