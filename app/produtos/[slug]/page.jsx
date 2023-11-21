@@ -20,11 +20,12 @@ function Card({ img, children }) {
 function Suggestions({suggestions}) {
 	"use client";
 	const shuffled = suggestions.sort(() => 0.5 - Math.random());
-	var selected = shuffled.slice(0, 1);
+	var selected = shuffled.slice(0, 4);
 
 	return(
 		<>
-			{ selected.map((item, index) => 
+			{ 
+				selected.map((item, index) => 
 				<>
 					<Link className='' key={index} href={`/produtos/${slugify(item[0])}`}>
 						<Card img={`/produtos/${item[5]}/photo.webp`}>
