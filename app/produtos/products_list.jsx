@@ -16,7 +16,16 @@ export default function ProductsList({products}) {
 	return (
 		<>
 			<div>
-				espaço para filtro por tipo de item (piso vilinico, piso laminado, acessório, rodapé e etc)
+				<div role="tablist" class="dui-tabs dui-tabs-bordered">
+					<input type="radio" name="my_tabs_1" role="tab" class="dui-tab" aria-label="Tab 1" />
+					<div role="tabpanel" class="dui-tab-content p-10">Tab content 1</div>
+
+					<input type="radio" name="my_tabs_1" role="tab" class="dui-tab" aria-label="Tab 2" checked />
+					<div role="tabpanel" class="dui-tab-content p-10">Tab content 2</div>
+
+					<input type="radio" name="my_tabs_1" role="tab" class="dui-tab" aria-label="Tab 3" />
+					<div role="tabpanel" class="dui-tab-content p-10">Tab content 3</div>
+				</div>
 			</div>
 			<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 				{ products.map((item, index) => 
