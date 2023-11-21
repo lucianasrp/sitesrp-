@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+	darkMode: "class",
   content: [
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -13,15 +14,12 @@ module.exports = {
   },
   daisyui: {
     styled: true,
-    themes: true,
     base: true,
     utils: true,
     logs: true,
     rtl: false,
-		darkMode: 'class',
     prefix: "dui-",
-		themes: ["cupcake", "cmyk"],
-    themeaaas: [
+    themes: [
       {
         mytheme: {
           "primary": "#FBBA00",
