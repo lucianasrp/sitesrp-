@@ -3,45 +3,8 @@ import { parse } from 'papaparse';
 import Title from "../../../components/title";
 import Section from "../../../components/section";
 import Link from 'next/link';
-
-function Card({ img, children }) {
-	return (
-		<>
-			<div className='dui-card min-h-full bg-base-100 border border-solid'>
-				<figure className='max-h-32 overflow-hidden'><img className='min-h-[8rem]' src={img} /></figure>
-				<div className='flex dui-card-body p-4'>
-					{children}
-				</div>
-			</div>
-		</>
-	)
-}
-
-function Suggestions({suggestions}) {
-	"use client";
-	const shuffled = suggestions.sort(() => 0.5 - Math.random());
-	var selected = shuffled.slice(0, 4);
-
-	return(
-		<>
-			{ 
-				selected.map((item, index) => 
-				<>
-					<Link className='' key={index} href={`/produtos/${slugify(item[0])}`}>
-						<Card img={`/produtos/${item[5]}/photo.webp`}>
-							<h3 className='dui-card-title text-base'>{item[0]}</h3>
-
-							<div className=" flex-1 dui-card-actions justify-end">
-								<div className="dui-badge dui-badge-primary">{item[1]}</div>
-								<div className="dui-badge dui-badge-neutral">{item[2]}</div>
-							</div>
-						</Card>
-					</Link>
-				</>
-			)}
-		</>
-	)
-}
+import Card from '../product_card';
+import ProductsSuggestions from '../products_suggestions';
 
 // TODO: COLOCAR ISSO NUMA LIB!
 function slugify(str) {
@@ -146,7 +109,7 @@ export default async function Home({ params }) {
 			<Section>
 				<h2>Itens que pode te interessar</h2>
 				<div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
-					<Suggestions suggestions={suggestions} />
+					<ProductsSuggestions products={suggestions} />
 				</div>
 			</Section>
 		</>
