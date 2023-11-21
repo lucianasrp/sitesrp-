@@ -58,6 +58,8 @@ export default async function ProductsPage() {
 		<>
 			{/* TITLE */}
 			<Title>PRODUTOS</Title>
+
+			{/* LISTA DE PRODUTOS */}
 			<Section className='flex gap-4'>
 				<div>
 					espaço para filtro por tipo de item (piso vilinico, piso laminado, acessório, rodapé e etc)
@@ -79,8 +81,9 @@ export default async function ProductsPage() {
 					)}
 				</div>
 			</Section>
-			<Section>
-				
+
+			{/* DEBUG */}
+			<Section>				
 				{JSON.stringify(data)}
 			</Section>
 		</>

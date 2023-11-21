@@ -45,29 +45,24 @@ export default function Home() {
 				</div>
 			</Intro>
 
-			{ /* APRESENTAÇÃO */}
-			<Section className='relative overflow-hidden text-center' >
-				nonono1
-			</Section >
-
 			{ /* SERVIÇOS */}
 			<Section className='relative overflow-hidden' >
 				<div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
-					<Card img='/home/cards/instalacao.jpg'>
+					<Card img='/home/cards/instalacao.webp'>
 						<h2 className='dui-card-title'>Instalação</h2>
 						<div>
 							<p>Nossa expertise em Instalação de Pisos e Revestimentos abrange uma ampla variedade de opções, desde Pisos Laminados e Pisos de Madeira até Pisos Vinílicos e muito mais. Com mais de 9 anos de experiência no mercado, nossa equipe altamente qualificada assegura a instalação de alta qualidade, proporcionando ambientes duradouros e esteticamente agradáveis.</p>
 						</div>
 					</Card>
 
-					<Card img='/home/cards/manutencao.jpg'>
+					<Card img='/home/cards/manutencao.webp'>
 						<h2 className='dui-card-title'>Manutenção</h2>
 						<div>
 							<p>Mantenha seus pisos em perfeitas condições com nossos serviços de Manutenção de Pisos. Oferecemos soluções de limpeza e impermeabilização, incluindo Limpeza de Piso Vinílico, para garantir a longevidade e a beleza de seus pisos. Deixe-nos cuidar da manutenção para que você possa desfrutar de um espaço impecável.</p>
 						</div>
 					</Card>
 
-					<Card img='/home/cards/venda.jpg'>
+					<Card img='/home/cards/venda.webp'>
 						<h2 className='dui-card-title'>Venda</h2>
 						<div>
 							<p>Explore nossa ampla gama de produtos de alta qualidade para aprimorar seus espaços. Oferecemos desde Pisos Laminados, Pisos de Madeira e Pisos Vinílicos até Lustres, Papel de Parede, Persianas e muito mais. Garantimos a disponibilidade dos melhores produtos e acessórios para atender às suas necessidades de decoração e design.</p>
