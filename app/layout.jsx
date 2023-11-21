@@ -15,7 +15,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" data-theme="mytheme">
       <body className='flex flex-col h-screen justify-between'>
 
         <Navbar src='/logo-white.svg'></Navbar>
