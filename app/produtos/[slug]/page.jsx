@@ -83,11 +83,10 @@ async function getData({slug}) {
 }
 
 export default async function Home({ params }) {
-	'use client';
-	const { product, suggestions } = await getData(params);
-
+	"use client";
+	const {product, suggestions} = await getData(params);
 	const shuffled = suggestions.sort(() => 0.5 - Math.random());
-	let selected = shuffled.slice(0, 1);
+	var selected = shuffled.slice(0, 4);
 
 	return(
 		<>

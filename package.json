@@ -3,18 +3,18 @@
   "scripts": {
     "dev": "cp next.dev.config.js next.config.js | next dev",
     "build": "cp next.build.config.js next.config.js | node build.js | next build",
-		"pack": "node build.js",
+    "pack": "node build.js",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "eslint": "8.40.0",
-    "eslint-config-next": "13.4.3",
-    "next": "^14.0.2-canary.12",
+    "eslint-config-next": "^14.0.3",
+    "next": "^14.0.3",
     "nextjs-router": "^1.0.2",
     "papaparse": "^5.4.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-papaparse": "^4.4.0",
     "webp-converter": "^2.3.3"
   },
