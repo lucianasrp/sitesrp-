@@ -86,7 +86,7 @@ export default async function Home({ params }) {
 	const { product, suggestions } = await getData(params);
 
 	const shuffled = suggestions.sort(() => 0.5 - Math.random());
-	let selected = shuffled.slice(0, 6);
+	let selected = shuffled.slice(0, 1);
 
 	return(
 		<>
@@ -122,7 +122,7 @@ export default async function Home({ params }) {
 			{ /* ITENS SEMELHANTES */ }
 			<Section>
 				<h2>Itens que pode te interessar</h2>
-				<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
+				<div className='grid grid-cols-2 md:grid-cols-4 gap-4'>
 					{ selected.map((item, index) => 
 						<>
 							<Link className='' key={index} href={`/produtos/${slugify(item[0])}`}>
