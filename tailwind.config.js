@@ -18,13 +18,13 @@ module.exports = {
     utils: true,
     logs: true,
     rtl: false,
-		darkMode: "false",
+		darkMode: "mytheme",
     prefix: "dui-",
     themes: [
       {
         mytheme: {
           "primary": "#FBBA00",
-          "secondary": "#00000",
+          "secondary": "#000000",
           "accent": "#1FB2A5",
           "neutral": "#24272e",
           "base-100": "#FFFFFF",
