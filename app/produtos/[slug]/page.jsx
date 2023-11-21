@@ -83,6 +83,7 @@ async function getData({slug}) {
 }
 
 export default async function Home({ params }) {
+	'use client';
 	const { product, suggestions } = await getData(params);
 
 	const shuffled = suggestions.sort(() => 0.5 - Math.random());
