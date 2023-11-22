@@ -20,9 +20,6 @@ export default function ProductsList({products, tags}) {
 
 	return (
 		<>
-			<div>
-				{selected}
-			</div>
 			{/* TAGS */}
 			<div>
 				<div className='dui-tabs dui-tabs-boxed'>
