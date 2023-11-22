@@ -37,8 +37,9 @@ async function getData() {
 	}
 
 	// criar estrutura de diretório dos itens
-	for (const product of products) {
-		// organizar o tipo de item
+	for( const product of products ) {
+		if( !output.tags.includes(product[2]) )
+			output.tags.push(product[2]);
 	}
 
 	// adicionar os itens em seus paths
@@ -55,13 +56,13 @@ export default async function ProductsPage() {
 
 			{/* LISTA DE PRODUTOS */}
 			<Section className='flex gap-4'>
-				<ProductsList products={data.products} />
+				<ProductsList products={data.products} tags={data.tags} />
 			</Section>
 
-			{/* DEBUG */}
+			{/* DEBUG 
 			<Section>				
 				{JSON.stringify(data)}
-			</Section>
+			</Section>*/}
 		</>
 	)
 }

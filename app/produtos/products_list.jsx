@@ -1,7 +1,8 @@
-"use client";
+'use client';
 
-import Link from "next/link"
-import ProductCard from "./product_card"
+import Link from 'next/link'
+import ProductCard from './product_card'
+import { useState, useEffect } from 'react'
 
 function slugify(str) {
   return String(str)
@@ -14,15 +15,23 @@ function slugify(str) {
     .replace(/-+/g, '-'); // remove consecutive hyphens
 }
 
-export default function ProductsList({products}) {
+export default function ProductsList({products, tags}) {
+	const [selected, setSelected] = useState(-1);
+
 	return (
 		<>
 			<div>
-				<div className="dui-btn-group justify-center flex-wrap">
-					<button className="dui-btn dui-tab-bordered dui-btn-active">Todos</button>
-					{products.map((categoria, index) => <button key={index} className="dui-btn dui-tab-bordered capitalize">{categoria[2]}</button>)}
+				{selected}
+			</div>
+			{/* TAGS */}
+			<div>
+				<div className='dui-tabs dui-tabs-boxed'>
+					<a className={`dui-tab ${selected == -1 ? 'dui-tab-active' : ''}`} onClick={()=>setSelected(-1)}>Todos</a> 
+					{tags.map((tag, index) => <a key={index} className={`dui-tab ${selected == tag ? 'dui-tab-active' : ''} capitalize`} onClick={()=>setSelected(tag)}>{tag}</a>)}
 				</div>
 			</div>
+
+			{/* PRODUTOS */}
 			<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 				{ products.map((item, index) => 
 					<>
@@ -30,9 +39,9 @@ export default function ProductsList({products}) {
 							<ProductCard img={`/produtos/${item[5]}/photo.webp`}>
 								<h3 className='dui-card-title text-base'>{item[0]}</h3>
 
-								<div className=" flex-1 dui-card-actions justify-end">
-									<div className="dui-badge dui-badge-primary">{item[1]}</div>
-									<div className="dui-badge dui-badge-neutral">{item[2]}</div>
+								<div className='flex-1 dui-card-actions justify-end'>
+									<div className='dui-badge dui-badge-primary'>{item[1]}</div>
+									<div className='dui-badge dui-badge-neutral'>{item[2]}</div>
 								</div>
 							</ProductCard>
 						</Link>
