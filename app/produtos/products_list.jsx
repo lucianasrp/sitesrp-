@@ -27,7 +27,7 @@ export default function ProductsList({products, tags}) {
 			<div>
 				<div className='dui-tabs dui-tabs-boxed'>
 					<a className={`dui-tab ${selected == -1 ? 'dui-tab-active' : ''}`} onClick={()=>setSelected(-1)}>Todos</a> 
-					{tags.map((tag, index) => <a key={index} className={`dui-tab ${selected == tag ? 'dui-tab-active' : ''} capitalize`} onClick={()=>setSelected(tag)}>{tag}</a>)}
+					{tags.map((tag, index) => <a key={index} className={`dui-tab ${selected === tag ? 'dui-tab-active' : ''} capitalize`} onClick={()=>setSelected(tag)}>{tag}</a>)}
 				</div>
 			</div>
 
@@ -35,7 +35,7 @@ export default function ProductsList({products, tags}) {
 			<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 				{ products.map((item, index) => 
 					<>
-						<Link className='' key={index} href={`/produtos/${slugify(item[0])}`}>
+						<Link className={selected == -1 || selected === item[2] ? '' : `hidden`} key={index} href={`/produtos/${slugify(item[0])}`}>
 							<ProductCard img={`/produtos/${item[5]}/photo.webp`}>
 								<h3 className='dui-card-title text-base'>{item[0]}</h3>
 
