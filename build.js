@@ -24,7 +24,7 @@ async function getData() {
 				if (!fs.existsSync(path))
 					fs.mkdirSync(path);
 	
-				const ext = split(product[4], '.').slice(-1);
+				const ext = 'tmp';//split(product[4], '.').slice(-1);
 				const file = fs.createWriteStream(`${path}/file.${ext}`);
 				const request = https.get(product[4], function(response) {
 					response.pipe(file);
