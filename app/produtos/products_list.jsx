@@ -24,7 +24,7 @@ export default function ProductsList({products, tags}) {
 			<div>
 				<div className='dui-tabs dui-tabs-boxed'>
 					<a className={`dui-tab ${selected == -1 ? 'dui-tab-active' : ''}`} onClick={()=>setSelected(-1)}>Todos</a> 
-					{tags.map((tag, index) => <a key={index} className={`dui-tab ${selected === tag ? 'dui-tab-active' : ''} capitalize`} onClick={()=>setSelected(tag)}>{tag}</a>)}
+					{tags.sort().map((tag, index) => <a key={index} className={`dui-tab ${selected === tag ? 'dui-tab-active' : ''} capitalize`} onClick={()=>setSelected(tag)}>{tag}</a>)}
 				</div>
 			</div>
 
