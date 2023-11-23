@@ -28,6 +28,13 @@ export default function ProductsList({products, tags}) {
 				</div>
 			</div>
 
+			<div>
+				<select className="dui-select dui-select-primary w-full max-w-xs capitalize" onChange={(event)=>setSelected(event.target.value)}>
+					<option value={-1} selected>Todos</option>
+					{tags.sort().map((tag, index) => <option key={index} value={tag}>{tag}</option>)}
+				</select>
+			</div>
+
 			{/* PRODUTOS */}
 			<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 				{ products.map((item, index) => 
