@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "cp next.dev.config.js next.config.js | next dev",
-    "build": "cp next.build.config.js next.config.js | node build.js | next build",
+    "dev": "cp next.dev.config.js next.config.js | node build.js | next dev",
+    "build": "cp next.build.config.js next.config.js | next build",
     "pack": "node build.js",
     "start": "next start",
     "lint": "next lint"
