@@ -16,20 +16,21 @@ function slugify(str) {
 }
 
 export default function ProductsList({products, tags}) {
-	const [selected, setSelected] = useState(-1);
+	//const [selectedTag, setSelectedTag] = useState(-1);
+	const [selectedTag, setSelectedTag] = useState(-1);
 
 	return (
 		<>
 			{/* TAGS */}
 			<div>
 				<div className='dui-tabs dui-tabs-boxed'>
-					<a className={`dui-tab ${selected == -1 ? 'dui-tab-active' : ''}`} onClick={()=>setSelected(-1)}>Todos</a> 
-					{tags.sort().map((tag, index) => <a key={index} className={`dui-tab ${selected === tag ? 'dui-tab-active' : ''} capitalize`} onClick={()=>setSelected(tag)}>{tag}</a>)}
+					<a className={`dui-tab ${selectedTag == -1 ? 'dui-tab-active' : ''}`} onClick={()=>setSelectedTag(-1)}>Todos</a> 
+					{tags.sort().map((tag, index) => <a key={index} className={`dui-tab ${selectedTag === tag ? 'dui-tab-active' : ''} capitalize`} onClick={()=>setSelectedTag(tag)}>{tag}</a>)}
 				</div>
 			</div>
 
 			<div>
-				<select className="dui-select dui-select-primary w-full max-w-xs capitalize" onChange={(event)=>setSelected(event.target.value)}>
+				<select className="dui-select dui-select-primary w-full max-w-xs capitalize" onChange={(event)=>setSelectedTag(event.target.value)}>
 					<option value={-1} selected>Todos</option>
 					{tags.sort().map((tag, index) => <option key={index} value={tag}>{tag}</option>)}
 				</select>
@@ -39,8 +40,8 @@ export default function ProductsList({products, tags}) {
 			<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 				{ products.map((item, index) => 
 					<>
-						<Link key={index} className={selected == -1 || selected === item[2] ? '' : `hidden`} href={`/produtos/${slugify(item[0])}`}>
-							<ProductCard img={`/produtos/${item[5]}/photo.webp`}>
+						<Link key={index} className={selectedTag == -1 || selectedTag === item[2] ? '' : `hidden`} href={`/produtos/${slugify(item[0])}`}>
+							<ProductCard img={`/produtos/${item[5]}/thumb.webp`}>
 								<h3 className='dui-card-title text-base'>{item[0]}</h3>
 
 								<div className='flex-1 dui-card-actions justify-end'>

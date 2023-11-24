@@ -29,7 +29,7 @@ export default function ProductsSuggestions({products}) {
 				selected.map((item, index) => 
 				<>
 					<Link className='' key={index} href={`/produtos/${slugify(item[0])}`}>
-						<ProductCard img={`/produtos/${item[5]}/photo.webp`}>
+						<ProductCard img={`/produtos/${item[5]}/thumb.webp`}>
 							<h3 className='dui-card-title text-base'>{item[0]}</h3>
 	
 							<div className=" flex-1 dui-card-actions justify-end">
