@@ -8,13 +8,28 @@ const webp = require('webp-converter');
 
 const { split } = require('postcss/lib/list');
 
+function slugify(str) {
+  return String(str)
+    .normalize('NFKD') // split accented characters into their base characters and diacritical marks
+    .replace(/[\u0300-\u036f]/g, '') // remove all the accents, which happen to be all in the \u03xx UNICODE block.
+    .trim() // trim leading or trailing whitespace
+    .toLowerCase() // convert to lowercase
+    .replace(/[^a-z0-9 -]/g, '') // remove non-alphanumeric characters
+    .replace(/\s+/g, '-') // replace spaces with hyphens
+    .replace(/-+/g, '-'); // remove consecutive hyphens
+}
+
 async function cropPhoto(path, file, width, height) {
 	const ext = 'tmp';
 	const channels = 3;
 
-	await sharp(`${path}/file.${ext}`, { raw: { width, height, channels } })
-		.resize(width, height)
-  	.toFile(`${path}/${file}.webp`);
+	try {
+		await sharp(`${path}/file.${ext}`, { raw: { width, height, channels } })
+			.resize(width, height)
+			.toFile(`${path}/${file}.webp`);
+	} catch (error) {
+		console.log(`${path}/${file} -> ${error}`);
+	}
 }
 
 async function getData() {
@@ -25,14 +40,16 @@ async function getData() {
 	const buffer = fs.readFileSync('private/produtos.tsv');
 	const productsData = buffer.toString();
 	
-	await papa.parse(productsData.substring(productsData.indexOf("\n") + 1), {
+	papa.parse(productsData.substring(productsData.indexOf("\n") + 1), {
 		worker: true,
 		step: function(results) {
 			const product = results.data;
+			const slug = slugify(`${product[1]} - ${product[0]}`);
 			const path = `public/produtos/${product[5]}`;
 
 			// baixar a imagem do item
 			if(product[4]) {
+				//console.log(`${path} -> download iniciado`);
 				if (!fs.existsSync(path))
 					fs.mkdirSync(path);
 	
