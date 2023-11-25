@@ -22,14 +22,14 @@ export default function ProductsList({products, tags}) {
 	return (
 		<>
 			{/* TAGS */}
-			<div>
+			<div className='hidden md:block'>
 				<div className='dui-tabs dui-tabs-boxed'>
 					<a className={`dui-tab ${selectedTag == -1 ? 'dui-tab-active' : ''}`} onClick={()=>setSelectedTag(-1)}>Todos</a> 
 					{tags.sort().map((tag, index) => <a key={index} className={`dui-tab ${selectedTag === tag ? 'dui-tab-active' : ''} capitalize`} onClick={()=>setSelectedTag(tag)}>{tag}</a>)}
 				</div>
 			</div>
 
-			<div>
+			<div className='md:hidden text-center'>
 				<select className="dui-select dui-select-primary w-full max-w-xs capitalize" onChange={(event)=>setSelectedTag(event.target.value)}>
 					<option value={-1} selected>Todos</option>
 					{tags.sort().map((tag, index) => <option key={index} value={tag}>{tag}</option>)}
