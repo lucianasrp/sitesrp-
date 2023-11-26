@@ -40,7 +40,7 @@ export default function ProductsList({products, tags}) {
 			<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 				{ products.map((item, index) => 
 					<>
-						<Link key={index} className={selectedTag == -1 || selectedTag === item[2] ? '' : `hidden`} href={`/produtos/${slugify(item[0])}`}>
+						<Link key={index} className={selectedTag == -1 || selectedTag === item[2] ? '' : `hidden`} href={`/produtos/${item[5]}`}>
 							<ProductCard img={`/produtos/${item[5]}/thumb.webp`}>
 								<h3 className='dui-card-title text-base'>{item[0]}</h3>
 

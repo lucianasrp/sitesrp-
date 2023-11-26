@@ -28,6 +28,7 @@ export async function getStaticPaths() {
 		worker: true,
 		step: function(results) {
 			results.data[3] = results.data[4] = '';
+			results.data[5] = slugify(`${results.data[1]} - ${results.data[2]} - ${results.data[0]}`);
 			products.push(results.data);
 		}
 	});
@@ -40,7 +41,7 @@ export async function getStaticPaths() {
 	for (const product of products) {
 		paths.push({
 			params: {
-				slug: slugify(product[0]),
+				slug: product[5],
 			}
 		})
 	}
@@ -66,6 +67,7 @@ async function getData({slug}) {
 		worker: true,
 		step: function(results) {
 			results.data[3] = results.data[4] = '';
+			results.data[5] = slugify(`${results.data[1]} - ${results.data[2]} - ${results.data[0]}`);
 			products.push(results.data);
 		}
 	});
@@ -76,7 +78,7 @@ async function getData({slug}) {
 	};
 
 	for( const product of products ) {
-		if( slugify(product[0]) === slug ) 
+		if( product[5] === slug ) 
 			output.product = product;
 			//return product;
 	}

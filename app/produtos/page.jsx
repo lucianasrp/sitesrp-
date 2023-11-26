@@ -27,6 +27,7 @@ async function getData() {
 		worker: true,
 		step: function(results) {
 			results.data[3] = results.data[4] = '';
+			results.data[5] = slugify(`${results.data[1]} - ${results.data[2]} - ${results.data[0]}`);
 			products.push(results.data);
 		}
 	});

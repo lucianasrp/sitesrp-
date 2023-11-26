@@ -25,7 +25,12 @@ async function cropPhoto(path, file, width, height) {
 
 	try {
 		await sharp(`${path}/file.${ext}`, { raw: { width, height, channels } })
-			.resize(width, height)
+			.resize(width, height, {
+				background: { r: 255, g: 255, b: 255, alpha: 1 },
+				fit: sharp.fit.outside,
+				gravity: sharp.gravity.center,
+				position: sharp.strategy.entropy
+			})
 			.toFile(`${path}/${file}.webp`);
 	} catch (error) {
 		console.log(`${path}/${file} -> ${error}`);
@@ -44,8 +49,8 @@ async function getData() {
 		worker: true,
 		step: function(results) {
 			const product = results.data;
-			const slug = slugify(`${product[1]} - ${product[0]}`);
-			const path = `public/produtos/${product[5]}`;
+			const slug = slugify(`${product[1]} - ${product[2]} - ${product[0]}`);
+			const path = `public/produtos/${slug}`;
 
 			// baixar a imagem do item
 			if(product[4]) {
