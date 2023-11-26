@@ -27,18 +27,11 @@ export default function Page() {
 				</div>
 			</Section>
 
-			{/* APRESENTAÇÃO DOS SÓCIOS */}
+			{/* NOSSOS TRABALHOS */}
 			<Section>
-				<h2>Nossa Equipe</h2>
-				<div className='grid grid-cols-1 md:grid-cols-4'>
-
-				</div>
-				espaço para apresentar a equipe ou sócios da empresa
-			</Section>
-
-			{/* ESTATÍSTICAS */}
-			<Section>
-				espaço para apresentar estatísticas da empresa, como total de serviços prestados, total de clientes e etc
+				<h2>Nossos Trabalhos</h2>
+				<p>Explore nossa galeria de projetos para ter uma visão mais aprofundada de como nossos serviços podem transformar diferentes ambientes. Cada imagem conta uma história de excelência, mostrando o antes e o depois de nossas instalações e revitalizações.</p>
+				<p>Seja para um ambiente residencial, comercial, hospitalar ou industrial, a <strong>SRP SARTORI REVEST PISOS</strong> está comprometida em oferecer soluções personalizadas que atendam às suas necessidades específicas. De pisos inovadores a revestimentos de parede elegantes, estamos aqui para criar ambientes que refletem seu estilo e funcionalidade desejada.</p>
 			</Section>
 
 			{ /* FORNECEDORES */}

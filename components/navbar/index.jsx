@@ -10,7 +10,7 @@ import { CONTACT } from '../../config/contact'
 const navmenu = [
 	{ label: 'Produtos', href: '/produtos' },
 	{ label: 'Serviços', href: '/servicos' },
-	{ label: 'Obras Realizadas', href: '/obras-realizadas' },
+	//{ label: 'Obras Realizadas', href: '/obras-realizadas' },
 	{ label: 'Quem Somos', href: '/quem-somos' },
 	{ label: 'Contato', href: '/contato' },
 ];

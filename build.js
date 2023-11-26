@@ -60,21 +60,39 @@ async function getData() {
 	
 				const ext = 'tmp';//split(product[4], '.').slice(-1);
 				const file = fs.createWriteStream(`${path}/file.${ext}`);
-				const request = https.get(product[4], function(response) {
-					response.pipe(file);
-	
-					file.on('finish', async () => {
-						file.close();
-						console.log(`${path} -> download finalizado`);
 
-						await cropPhoto(path, 'thumb', 320, 240);
-						await cropPhoto(path, 'photo', 1024, 760);
-						console.log(`${path} -> conversão finalizada`);
+				if( product[4].includes('https') )
+					https.get(product[4], function(response) {
+						response.pipe(file);
+		
+						file.on('finish', async () => {
+							file.close();
+							console.log(`${path} -> download finalizado`);
 
-						//fs.rmSync(`${path}/file.${ext}`);
-						console.log(`${path} -> download apagado`);
+							await cropPhoto(path, 'thumb', 320, 240);
+							await cropPhoto(path, 'photo', 1024, 760);
+							console.log(`${path} -> conversão finalizada`);
+
+							//fs.rmSync(`${path}/file.${ext}`);
+							console.log(`${path} -> download apagado`);
+						})
 					})
-				})
+				else
+					http.get(product[4], function(response) {
+						response.pipe(file);
+		
+						file.on('finish', async () => {
+							file.close();
+							console.log(`${path} -> download finalizado`);
+
+							await cropPhoto(path, 'thumb', 320, 240);
+							await cropPhoto(path, 'photo', 1024, 760);
+							console.log(`${path} -> conversão finalizada`);
+
+							//fs.rmSync(`${path}/file.${ext}`);
+							console.log(`${path} -> download apagado`);
+						})
+					})
 			}
 		}
 	});
