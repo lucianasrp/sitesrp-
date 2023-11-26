@@ -36,3 +36,4 @@ next.config.js
 # vercel
 .vercel
 next.config.js
+*.tmp

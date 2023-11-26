@@ -66,7 +66,7 @@ async function getData() {
 						await cropPhoto(path, 'photo', 1024, 760);
 						console.log(`${path} -> conversão finalizada`);
 
-						fs.rmSync(`${path}/file.${ext}`);
+						//fs.rmSync(`${path}/file.${ext}`);
 						console.log(`${path} -> download apagado`);
 					})
 				})
