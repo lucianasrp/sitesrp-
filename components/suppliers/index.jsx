@@ -5,6 +5,7 @@ export default function Suppliers() {
 		{ img: '/fornecedores/logo_belgotex.webp', label: 'Belgotex', href: '#' },
 		{ img: '/fornecedores/logo_daud.webp', label: 'Daud', href: '#' },
 		{ img: '/fornecedores/logo_dipiso.webp', label: 'Dipiso', href: '#' },
+		{ img: '/fornecedores/logo_durafloor.webp', label: 'Durafloor', href: '#' },
 		{ img: '/fornecedores/logo_erbus.webp', label: 'Erbus', href: '#' },
 		{ img: '/fornecedores/logo_eucafloor.webp', label: 'Eucafloor', href: '#' },
 		{ img: '/fornecedores/logo_kasfloor.webp', label: 'Kasfloor', href: '#' },
