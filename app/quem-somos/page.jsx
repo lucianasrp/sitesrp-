@@ -3,6 +3,10 @@ import Title from "../../components/title";
 import Section from "../../components/section";
 import Suppliers from "../../components/suppliers";
 
+export const metadata = {
+  title: 'Quem Somos : SRP Sartori Revert Pisos',
+}
+
 export default function Page() {
 	return(
 		<>

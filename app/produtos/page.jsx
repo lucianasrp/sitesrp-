@@ -6,6 +6,10 @@ import Link from 'next/link';
 import Card from './product_card';
 import ProductsList from './products_list';
 
+export const metadata = {
+  title: 'Produtos : SRP Sartori Revert Pisos',
+}
+
 function slugify(str) {
   return String(str)
     .normalize('NFKD') // split accented characters into their base characters and diacritical marks

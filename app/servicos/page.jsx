@@ -3,6 +3,10 @@ import Title from "../../components/title";
 import Section from "../../components/section";
 import Collapse from "../../components/collapse";
 
+export const metadata = {
+  title: 'Serviços : SRP Sartori Revert Pisos',
+}
+
 export default function Page() {
 	return(
 		<>

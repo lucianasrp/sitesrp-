@@ -18,6 +18,42 @@ function slugify(str) {
     .replace(/-+/g, '-'); // remove consecutive hyphens
 }
 
+export async function generateMetadata({ params }) {
+	const buffer = fs.readFileSync('private/produtos.tsv');
+	const productsData = buffer.toString();
+
+	const products = [];
+	await Papa.parse(productsData.substring(productsData.indexOf("\n") + 1), {
+		worker: true,
+		step: function(results) {
+			results.data[3] = results.data[4] = '';
+			results.data[5] = slugify(`${results.data[1]} - ${results.data[2]} - ${results.data[0]}`);
+			products.push(results.data);
+		}
+	});
+
+	let output = [];
+
+	for( const product of products ) {
+		if( product[5] === params.slug ) {
+			output = product;
+			break;
+		}
+	}
+	
+  return {
+    title: `${output[0]} : SRP Sartori Revert Pisos`,
+		openGraph: {
+			//description: 'Some description',
+			images: [
+				{
+					url: `/produtos/${output[5]}/photo.webp`,
+				},
+			]
+		}
+  }
+}
+
 export async function getStaticPaths() {
 	// abrir e de itens
 	const buffer = fs.readFileSync('private/produtos.tsv');
@@ -75,12 +111,13 @@ async function getData({slug}) {
 	const output = {
 		product: [],
 		suggestions: []
-	};
+	}
 
 	for( const product of products ) {
-		if( product[5] === slug ) 
+		if( product[5] === slug ) {
 			output.product = product;
-			//return product;
+			break;
+		}
 	}
 
 	for( const product of products ) {
