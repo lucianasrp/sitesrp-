@@ -47,7 +47,7 @@ export async function generateMetadata({ params }) {
 			//description: 'Some description',
 			images: [
 				{
-					url: `/produtos/${output[5]}/photo.webp`,
+					url: `https://drywalldecor-site.pages.dev/produtos/${output[5]}/photo.webp`,
 				},
 			]
 		}
