@@ -1,11 +1,15 @@
 export const COMPANY = {
-	name: 'Company Name LTDA',
+	name: 'SRP Sartori Revert Pisos',
 	cnpj: '12.345.678/0001-01',
 
 	location: {
-		address: 'Address',
-		neighborhood: 'neighborhood',
-		city: 'City',
-		state: 'Estado',
+		address: 'Rua Alaelcio Pereira de Araujo, 449',
+		neighborhood: 'Mirante',
+		city: 'São José do Rio Preto',
+		state: 'São Paulo',
+		zip: '15042-230'
 	}
 }
+
+
+

@@ -1,10 +1,10 @@
 export const CONTACT = {
-	email: 'email@company.com.br',
-	phone: '(12) 1234-5678',
-	mobile: '(12) 123-456-789',
+	email: 'vendas01@srprevestpisos.com.br',
+	phone: '(17) 3236-4420',
+	mobile: '(17) 99627-8222',
 
 	whatsapp: {
-		number: '12123456789',
-		message: 'Default WhatsApp message.'
+		number: '+5517996278222',
+		message: ''
 	}
 }
