@@ -21,7 +21,8 @@ export default function Page() {
 				<div className='flex flex-col md:grid md:grid-cols-5 gap-8'>
 					<div className='flex flex-col gap-4 col-span-2'>
 						<h3>Adoramos explorar novos projetos e desafios criativos!</h3>
-						<h3>Por favor, compartilhe conosco o máximo de detalhes possível para que possamos enriquecer nosso primeiro encontro. Estamos entusiasmados para descobrir mais sobre o seu projeto de decoração residencial ou comercial e como podemos transformar a sua visão em uma realidade encantadora.</h3>
+						<h3>Por favor, compartilhe conosco o máximo de detalhes possível para que possamos enriquecer nosso primeiro encontro.</h3>
+						<h3>Estamos entusiasmados para descobrir mais sobre o seu projeto e como podemos transformar a sua visão em uma realidade encantadora!</h3>
 						<Socials />
 					</div>
 					<div className='flex flex-col col-span-3'>
