@@ -3,7 +3,7 @@ export const COMPANY = {
 	cnpj: '12.345.678/0001-01',
 
 	location: {
-		address: 'Rua Alaelcio Pereira de Araujo, 449',
+		address: 'Rua Alaélcio Pereira de Araujo, 449',
 		neighborhood: 'Mirante',
 		city: 'São José do Rio Preto',
 		state: 'São Paulo',

@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
 
 				{/* MAPA */}
 				<div className='gmap_canvas dui-hero min-h-[384px]'>
-					<OpenStreetMap lat={-22.345084517418233} lon={-47.1692419052124} zoom={19} />
+					<OpenStreetMap lat={-20.7859752} lon={-49.4410888} zoom={19} />
 				</div>
         <Footer src='/logo.svg'></Footer>
         <Whatsapp />

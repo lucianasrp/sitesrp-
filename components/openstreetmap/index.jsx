@@ -6,6 +6,8 @@ export default async function OpenStreetMap({ lat, lon, zoom }) {
 	let zLon = 0.000002499001956 * zoom * 20;
 
 	//const Nominatim = require('nominatim-geocoder')
+	/*
+	// NOTA: eu consigo pegar a lat lon pelo endereço usando uma API do OSM
 	const geocoder = new Nominatim()
 	let data = [];
 
@@ -24,7 +26,7 @@ export default async function OpenStreetMap({ lat, lon, zoom }) {
     });
 
 	lat = parseFloat(data.lat);
-	lon = parseFloat(data.lon);
+	lon = parseFloat(data.lon);*/
 
 	// lat: '-20.7859752',
 	// lon: '-49.4410888',
@@ -34,8 +36,8 @@ export default async function OpenStreetMap({ lat, lon, zoom }) {
 
 	return (
 		<>
-			<iframe className='osmap_iframe w-full h-full' width="425" height="350" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"
-				src={`https://www.openstreetmap.org/export/embed.html?bbox=${lon-zLon}%2C${lat-zLat}%2C${lon+zLon}%2C${lat+zLat}&layer=mapnik&marker=${lat}%2C${lon}&layer=transportmap`}></iframe>
+			<iframe className='osmap_iframe w-full h-full' width='425' height='350' frameBorder='0' scrolling='no' marginHeight='0' marginWidth='0' loading='lazy'
+				src={`https://www.openstreetmap.org/export/embed.html?bbox=${lon-zLon}%2C${lat-zLat}%2C${lon+zLon}%2C${lat+zLat}&layer=mapnik&marker=${lat}%2C${lon}&layer=transportmap`} />
 		</>
 	)
 }
