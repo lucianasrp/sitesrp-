@@ -23,8 +23,8 @@ export default async function OpenStreetMap({ lat, lon, zoom }) {
 				)
     });
 
-	lat = data.lat;
-	lon = data.lon;
+	lat = parseFloat(data.lat);
+	lon = parseFloat(data.lon);
 
 	// lat: '-20.7859752',
 	// lon: '-49.4410888',
@@ -35,7 +35,14 @@ export default async function OpenStreetMap({ lat, lon, zoom }) {
 	return (
 		<>
 			<iframe className='osmap_iframe w-full h-full' width="425" height="350" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"
-				src={`https://www.openstreetmap.org/export/embed.html?bbox=${data.boundingbox[2]}%2C${data.boundingbox[0]}%2C${data.boundingbox[3]}%2C${data.boundingbox[1]}&layer=mapnik&marker=${lat}%2C${lon}&layer=transportmap`}></iframe>
+				src={`https://www.openstreetmap.org/export/embed.html?bbox=${lon-0.001}%2C${lat-0.001}%2C${lon+0.001}%2C${lat+0.001}&layer=mapnik&marker=${lat}%2C${lon}&layer=transportmap`}></iframe>
 		</>
 	)
 }
+
+/*
+
+			<iframe className='osmap_iframe w-full h-full' width="425" height="350" frameBorder="0" scrolling="no" marginHeight="0" marginWidth="0"
+				src={`https://www.openstreetmap.org/export/embed.html?bbox=${data.boundingbox[2]}%2C${data.boundingbox[0]}%2C${data.boundingbox[3]}%2C${data.boundingbox[1]}&layer=mapnik&marker=${lat}%2C${lon}&layer=transportmap`}></iframe>
+
+				*/
