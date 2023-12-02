@@ -1,5 +1,5 @@
-import { SOCIAL } from '../../config/social'
-import { CONTACT } from '../../config/contact'
+import SOCIAL from '../../config/social'
+import CONTACT from '../../config/contact'
 
 // Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc.
 

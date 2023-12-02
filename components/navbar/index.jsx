@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 
 import Section from '../section';
 import Socials from '../socials';
-import { CONTACT } from '../../config/contact'
+import CONTACT from '../../config/contact'
 
 const navmenu = [
 	{ label: 'Produtos', href: '/produtos' },

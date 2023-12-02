@@ -1,4 +1,4 @@
-export const SOCIAL = {
+const SOCIAL = {
 	//tiktok: 'companyTiktok',
 	instagram: 'srprevestpisos',
 	//threads: 'companyThreads',
@@ -7,3 +7,5 @@ export const SOCIAL = {
 	//linkedin: 'companyLinkedin',
 	//youtube: 'companyYouTube',
 }
+
+export default SOCIAL;

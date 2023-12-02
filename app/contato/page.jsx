@@ -1,5 +1,11 @@
+import Link from "next/link";
+
 import Title from "../../components/title";
 import Section from "../../components/section";
+import Socials from "../../components/socials";
+
+import COMPANY from "../../config/company";
+import CONTACT from "../../config/contact";
 
 export const metadata = {
   title: 'Contato : SRP Sartori Revert Pisos',
@@ -11,6 +17,33 @@ export default function Page() {
 		<>
 			{/* TITLE */}
 			<Title>CONTATO</Title>
+			<Section>
+				<div className='grid grid-cols-5 gap-4'>
+					<div className='flex flex-col gap-4 col-span-2'>
+						<h3>Adoramos explorar novos projetos e desafios criativos!</h3>
+						<h3>Por favor, compartilhe conosco o máximo de detalhes possível para que possamos enriquecer nosso primeiro encontro. Estamos entusiasmados para descobrir mais sobre o seu projeto de decoração residencial ou comercial e como podemos transformar a sua visão em uma realidade encantadora.</h3>
+						<Socials />
+					</div>
+					<div className='flex flex-col col-span-3'>
+						<div className='grid grid-cols-3 border-solid border-y p-2'>
+							<h3 className='font-normal'>e-mail</h3>
+							<h3 className='col-span-2'><Link href={`mailto: ${CONTACT.email}`}>{CONTACT.email}</Link></h3>
+						</div>
+						<div className='grid grid-cols-3 border-solid border-y p-2'>
+							<h3 className='font-normal'>telefone</h3>
+							<h3 className='col-span-2'><Link href={`tel: ${CONTACT.phone}`}>{CONTACT.phone}</Link></h3>
+						</div>
+						<div className='grid grid-cols-3 border-solid border-y p-2'>
+							<h3 className='font-normal'>whatsapp</h3>
+							<h3 className='col-span-2'><Link href={`https://wa.me/${CONTACT.whatsapp.number}?text=${encodeURI(CONTACT.whatsapp.message)}`} target='_blank' rel='noreferrer'>{CONTACT.whatsapp.label}</Link></h3>
+						</div>
+						<div className='grid grid-cols-3 border-solid border-y p-2'>
+							<h3 className='font-normal'>endereço</h3>
+							<h3 className='col-span-2'>{COMPANY.location.address}<br />{COMPANY.location.neighborhood} - {COMPANY.location.city}, {COMPANY.location.state}</h3>
+						</div>
+					</div>
+				</div>
+			</Section>
 		</>
 	)
 }

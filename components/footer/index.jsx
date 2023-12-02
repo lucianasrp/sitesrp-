@@ -2,8 +2,8 @@ import Image from 'next/image'
 import Socials from '../socials'
 import FooterDialoga from '../footer-dialoga'
 
-import { COMPANY } from '../../config/company'
-import { CONTACT } from '../../config/contact'
+import COMPANY from '../../config/company'
+import CONTACT from '../../config/contact'
 
 export default function Footer({ className, src, children }) {
 	return (

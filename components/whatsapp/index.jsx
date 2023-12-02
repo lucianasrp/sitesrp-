@@ -1,6 +1,6 @@
 import style from './whatsapp.module.css'
 
-import { CONTACT } from '../../config/contact'
+import CONTACT from '../../config/contact';
 
 export default function Whatsapp({ phone, message }) {
 	phone = (phone == undefined ? CONTACT.whatsapp.number : phone);

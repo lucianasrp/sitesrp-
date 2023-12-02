@@ -1,4 +1,4 @@
-export const COMPANY = {
+const COMPANY = {
 	name: 'SRP Sartori Revert Pisos',
 	cnpj: '12.345.678/0001-01',
 
@@ -11,5 +11,4 @@ export const COMPANY = {
 	}
 }
 
-
-
+export default COMPANY;

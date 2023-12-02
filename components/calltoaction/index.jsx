@@ -1,4 +1,4 @@
-import { CONTACT } from '../../config/contact'
+import CONTACT from '../../config/contact'
 
 export default function CallToAction({ background, img, url, children }) {
 	const phone = (CONTACT.whatsapp.number);
@@ -35,7 +35,7 @@ export default function CallToAction({ background, img, url, children }) {
 					</div>
 				</div>
 			</div>
-	*/}
+			*/}
 		</>
 	)
 }
