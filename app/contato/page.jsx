@@ -1,4 +1,7 @@
 import Link from "next/link";
+import Tel from "../../components/links/tel";
+import Whatsapp from "../../components/links/whatsapp";
+import MailTo from "../../components/links/mailto";
 
 import Title from "../../components/title";
 import Section from "../../components/section";
@@ -28,15 +31,15 @@ export default function Page() {
 					<div className='flex flex-col col-span-3'>
 						<div className='md:grid md:grid-cols-3 md:text-xl border-solid border-y p-2'>
 							<p className='font-normal'>e-mail</p>
-							<p className='col-span-2 font-bold'><Link href={`mailto: ${CONTACT.email}`}>{CONTACT.email}</Link></p>
+							<p className='col-span-2 font-bold'><MailTo>{CONTACT.email}</MailTo></p>
 						</div>
 						<div className='md:grid md:grid-cols-3 md:text-xl border-solid border-y p-2'>
 							<p className='font-normal'>telefone</p>
-							<p className='col-span-2 font-bold'><Link href={`tel: ${CONTACT.phone}`}>{CONTACT.phone}</Link></p>
+							<p className='col-span-2 font-bold'><Tel>{CONTACT.phone}</Tel></p>
 						</div>
 						<div className='md:grid md:grid-cols-3 md:text-xl border-solid border-y p-2'>
 							<p className='font-normal'>whatsapp</p>
-							<p className='col-span-2 font-bold'><Link href={`https://wa.me/${CONTACT.whatsapp.number}?text=${encodeURI(CONTACT.whatsapp.message)}`} target='_blank' rel='noreferrer'>{CONTACT.whatsapp.label}</Link></p>
+							<p className='col-span-2 font-bold'><Whatsapp>{CONTACT.whatsapp.label}</Whatsapp></p>
 						</div>
 						<div className='md:grid md:grid-cols-3 md:text-xl border-solid border-y p-2'>
 							<p className='font-normal'>endereço</p>

@@ -65,7 +65,7 @@ export default function Home() {
 					<Card img='/home/cards/venda.webp'>
 						<h2 className='dui-card-title'>Venda</h2>
 						<div>
-							<p>Explore nossa ampla gama de produtos de alta qualidade para aprimorar seus espaços. Oferecemos desde Pisos Laminados, Pisos de Madeira e Pisos Vinílicos até Lustres, Papel de Parede, Persianas e muito mais. Garantimos a disponibilidade dos melhores produtos e acessórios para atender às suas necessidades de decoração e design.</p>
+							<p>Explore nossa ampla gama de produtos de alta qualidade para aprimorar seus espaços. Oferecemos desde Pisos Laminados e Pisos Vinílicos até Lustres, Papel de Parede, Persianas e muito mais. Garantimos a disponibilidade dos melhores produtos e acessórios para atender às suas necessidades de decoração e design.</p>
 						</div>
 					</Card>
 				</div>

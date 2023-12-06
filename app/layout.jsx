@@ -2,7 +2,7 @@ import './globals.css'
 
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
-import Whatsapp from '../components/whatsapp'
+import WhatsappButton from '../components/whatsapp'
 import Section from '../components/section'
 import OpenStreetMap from '../components/openstreetmap'
 import CallToAction from '../components/calltoaction'
@@ -34,7 +34,7 @@ export default function RootLayout({ children }) {
 					<OpenStreetMap lat={-20.7859752} lon={-49.4410888} zoom={19} />
 				</div>
         <Footer src='/logo.svg'></Footer>
-        <Whatsapp />
+        <WhatsappButton />
       </body>
     </html >
   )

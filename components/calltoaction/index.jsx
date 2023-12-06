@@ -1,9 +1,7 @@
+import Whatsapp from '../links/whatsapp';
 import CONTACT from '../../config/contact'
 
-export default function CallToAction({ background, img, url, children }) {
-	const phone = (CONTACT.whatsapp.number);
-	const message = (CONTACT.whatsapp.message);
-
+export default function CallToAction({ background, img, url, whatsapp, children }) {
 	if (img == null) img = '/calltoaction_guy.png';
 
 	return (
@@ -14,7 +12,7 @@ export default function CallToAction({ background, img, url, children }) {
 					<div className='dui-hero-content text-center text-content'>
 						<div className='max-w-md'>
 							{children}
-							<a href={`https://wa.me/${phone}?text=${encodeURI(message)}`} className='dui-btn dui-btn-secondary' target='_blank' rel='noreferrer'>Fale Conosco!</a>
+							<Whatsapp className='dui-btn dui-btn-secondary'>Fale Conosco!</Whatsapp>
 						</div>
 					</div>
 				</div>
