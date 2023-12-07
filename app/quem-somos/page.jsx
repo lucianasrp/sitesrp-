@@ -15,11 +15,11 @@ export default function Page() {
 						
 			<Section>
 				<div className='flex flex-col md:flex-row gap-8'>
-					{/* FOTO DA EQUIPE OU ESCRITÓRIO */}
+					{/* FOTO DA EQUIPE OU ESCRITÓRIO 
 					<div>
 						<img className='w-full max-w-5xl mx-auto' alt='Foto da Equipe' src='/quem-somos/equipe.jpg' />
 						<p>aqui temos a foto da equipe ou do escritório</p>
-					</div>
+					</div>*/}
 
 					{/* DESCRITIVO */}
 					<div className='flex flex-col gap-4'>
