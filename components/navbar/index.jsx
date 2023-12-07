@@ -22,6 +22,10 @@ export default function Navbar({ className, src, children }) {
   const pathName = usePathname();
 	const pathNames = pathName.split('/').filter( path => path );
 	
+	useEffect(() => {
+    console.log(`Route changed to: ${pathName}`);
+		setCurrentState(false);
+  }, [pathName]);
 	
 	const [currentState, setCurrentState] = useState(false);
 	function ToggleMenu() {
@@ -90,7 +94,17 @@ export default function Navbar({ className, src, children }) {
 			</nav>
 			<div className='fixed flex md:hidden flex-col items-center justify-center w-full h-full z-40 gap-6 backdrop-blur-md bg-white/30 transition-all duration-500' style={{top: (currentState ? '0%' : '-100%')}}>
 				<div className='flex flex-col items-center max-h-[60vh] overflow-y-auto w-full text-2xl font-bold gap-4'>
-					{ navmenu.map((item, index) => <Link key={index} href={item.href} title={item.label} className='border-solid border-b-2 border-base-100 hover:border-primary'>{item.label}</Link>) }
+							{ 
+								navmenu.map((item, index) => {
+									let isSelected = false;
+									if(pathNames.length > 0)
+										isSelected = (`/${pathNames[0]}` === item.href);
+
+									return (
+										<Link key={index} href={item.href} title={item.label} className={`border-solid border-b-2 border-base-100 hover:border-primary ${(isSelected ? 'bg-primary border-primary rounded-md px-4' : '')}`}>{item.label}</Link> 
+									)
+								}) 
+							}
 				</div>
 				<div>
 					<Socials />
