@@ -64,7 +64,7 @@ export default function Page() {
 				</div>
 
 				<div>
-				 	<h3>Piso Vinilico Nelgotex - BR Mania Posto Pérola</h3>
+				 	<h3>Piso Vinilico Belgotex - BR Mania Posto Pérola</h3>
 				 	<div className='columns-2 md:columns-4'>
 				 		<img src='/trabalhos/foto6a.jpeg' />
 						<img src='/trabalhos/foto6b.jpeg' />
