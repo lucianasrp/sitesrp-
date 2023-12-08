@@ -11,12 +11,11 @@ export default function Footer({ className, src, children }) {
 			<footer className='flex flex-col gap-4 p-10 bg-neutral text-neutral-content'>
 				<div className='dui-footer'>
 					<div className='flex gap-4'>
-						<Image
+						<img
 							src={src}
 							alt='Logo'
 							width={96}
 							height={96}
-							priority
 						/>
 						<div>
 							<span className='dui-footer-title'>{COMPANY.name}</span>

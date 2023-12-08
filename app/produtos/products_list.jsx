@@ -25,32 +25,29 @@ export default function ProductsList({products, tags}) {
 			<div className='hidden md:block'>
 				<div className='dui-tabs dui-tabs-boxed'>
 					<a className={`dui-tab ${selectedTag == -1 ? 'dui-tab-active' : ''}`} onClick={()=>setSelectedTag(-1)}>Todos</a> 
-					{tags.sort().map((tag, index) => <a key={index} className={`dui-tab ${selectedTag === tag ? 'dui-tab-active' : ''} capitalize`} onClick={()=>setSelectedTag(tag)}>{tag}</a>)}
+					{tags.sort().map((tag, index) => <a key={`button-${index}`} className={`dui-tab ${selectedTag === tag ? 'dui-tab-active' : ''} capitalize`} onClick={()=>setSelectedTag(tag)}>{tag}</a>)}
 				</div>
 			</div>
 
 			<div className='md:hidden text-center'>
-				<select className="dui-select dui-select-primary w-full max-w-xs capitalize" onChange={(event)=>setSelectedTag(event.target.value)}>
-					<option value={-1} selected>Todos</option>
-					{tags.sort().map((tag, index) => <option key={index} value={tag}>{tag}</option>)}
+				<select className="dui-select dui-select-primary w-full max-w-xs capitalize" onChange={(event)=>setSelectedTag(event.target.value)} defaultValue='Todos'>
+					<option value={-1}>Todos</option>
+					{tags.sort().map((tag, index) => <option key={`select-${index}`} value={tag}>{tag}</option>)}
 				</select>
 			</div>
 
 			{/* PRODUTOS */}
 			<div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
 				{ products.map((item, index) => 
-					<>
-						<Link key={index} className={selectedTag == -1 || selectedTag === item[2] ? '' : `hidden`} href={`/produtos/${item[5]}`}>
-							<ProductCard img={`/produtos/${item[5]}/thumb.webp`}>
-								<h3 className='dui-card-title text-base'>{item[0]}</h3>
-
-								<div className='flex-1 dui-card-actions justify-end'>
-									<div className='dui-badge dui-badge-primary'>{item[1]}</div>
-									<div className='dui-badge dui-badge-neutral'>{item[2]}</div>
-								</div>
-							</ProductCard>
-						</Link>
-					</>
+					<Link key={index} className={selectedTag == -1 || selectedTag === item[2] ? '' : `hidden`} href={`/produtos/${item[5]}`}>
+						<ProductCard img={`/produtos/${item[5]}/thumb.webp`}>
+							<h3 className='dui-card-title text-base'>{item[0]}</h3>
+							<div className='flex-1 dui-card-actions justify-end'>
+								<div className='dui-badge dui-badge-primary'>{item[1]}</div>
+								<div className='dui-badge dui-badge-neutral'>{item[2]}</div>
+							</div>
+						</ProductCard>
+					</Link>
 				)}
 			</div>
 		</>

@@ -4,7 +4,7 @@ import Tel from '../links/tel';
 import Whatsapp from '../links/whatsapp';
 
 import { usePathname, useSearchParams } from 'next/navigation'
-import { useState, useEffect } from "react";
+import { useState, useEffect, createRef } from "react";
 
 import Section from '../section';
 import Socials from '../socials';
@@ -22,14 +22,17 @@ export default function Navbar({ className, src, children }) {
   const pathName = usePathname();
 	const pathNames = pathName.split('/').filter( path => path );
 	
+	const toggleButtonRef = createRef(null);
+
 	useEffect(() => {
-    console.log(`Route changed to: ${pathName}`);
-		setCurrentState(false);
+    setCurrentState(false);
+		toggleButtonRef.current.checked = false;
   }, [pathName]);
 	
 	const [currentState, setCurrentState] = useState(false);
 	function ToggleMenu() {
 		const newState = !currentState;
+		//toggleButtonRef.checked = newState;
 		setCurrentState(newState);
 	}
 
@@ -38,10 +41,7 @@ export default function Navbar({ className, src, children }) {
 			<nav className={`fixed md:relative w-full p-0 z-[100] bg-base-100 ${className}`}>
 				<div className={`w-full mx-auto grid grid-cols-5 md:grid-cols-8`}>
 					<Link className='col-span-2 bg-primary p-2 lg:p-5' href='/'>
-						<img
-							className='ml-auto h-10 lg:h-24'
-							src={src}
-						/>
+						<img className='ml-auto h-10 lg:h-24' width='auto' height='auto' src={src} />
 					</Link>
 
 					<div className='col-span-5 
@@ -83,7 +83,7 @@ export default function Navbar({ className, src, children }) {
 													transition-all duration-500 ease-in-out font-bold'>
 						<label className="dui-btn dui-btn-circle dui-btn-ghost dui-swap dui-swap-rotate">
 							{/* this hidden checkbox controls the state */}
-							<input type="checkbox" onChange={ToggleMenu} />
+							<input type="checkbox" ref={toggleButtonRef} onChange={ToggleMenu} />
 							{/* hamburger icon */}
 							<svg className="dui-swap-off fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z"/></svg>								
 							{/* close icon */}

@@ -1,6 +1,6 @@
 const COMPANY = {
 	name: 'SRP Sartori Revert Pisos',
-	cnpj: '12.345.678/0001-01',
+	//cnpj: '12.345.678/0001-01',
 
 	location: {
 		address: 'Rua Alaélcio Pereira de Araujo, 449',
