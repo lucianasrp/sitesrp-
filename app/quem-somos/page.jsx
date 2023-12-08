@@ -36,6 +36,54 @@ export default function Page() {
 				<h2>Nossos Trabalhos</h2>
 				<p>Explore nossa galeria de projetos para ter uma visão mais aprofundada de como nossos serviços podem transformar diferentes ambientes. Cada imagem conta uma história de excelência, mostrando o antes e o depois de nossas instalações e revitalizações.</p>
 				<p>Seja para um ambiente residencial, comercial, hospitalar ou industrial, a <strong>SRP SARTORI REVEST PISOS</strong> está comprometida em oferecer soluções personalizadas que atendam às suas necessidades específicas. De pisos inovadores a revestimentos de parede elegantes, estamos aqui para criar ambientes que refletem seu estilo e funcionalidade desejada.</p>
+
+				<div>
+				 	<h3>Piso Laminado Eucafloor - Nobile Resort Olímpia</h3>
+				 	<div className='columns-2 md:columns-4'>
+					 	<img src='/trabalhos/foto1a.jpeg' />
+						<img src='/trabalhos/foto1b.jpeg' />
+				 	</div>
+				</div>
+
+				<div>
+				 	<h3>Piso Vinilico Tarkett - SESI Rio preto</h3>
+				 	<div className='columns-2 md:columns-4'>
+				 		<img src='/trabalhos/foto2a.jpeg' />
+						<img src='/trabalhos/foto2b.jpeg' />
+				 	</div>
+				</div>
+				
+				<div>
+				 	<h3>Piso Laminado Eucafloor - Rosa Chock</h3>
+				 	<div className='columns-2 md:columns-4'>
+				 		<img src='/trabalhos/foto3a.jpeg' />
+						<img src='/trabalhos/foto3b.jpeg' />
+				 	</div>
+				</div>
+
+				<div>
+				 	<h3>Piso Vinilico Nelgotex - BR Mania Posto Pérola</h3>
+				 	<div className='columns-2 md:columns-4'>
+				 		<img src='/trabalhos/foto6a.jpeg' />
+				 	</div>
+				</div>
+
+				<div>
+				 	<h3>Piso Vinilico Durafloor - Academia W Fit</h3>
+				 	<div className='columns-2 md:columns-4'>
+						<img src='/trabalhos/foto8a.jpeg' />
+				 	</div>	
+				</div>
+
+				<div>
+					<h3>Outros Trabalhos</h3>
+					<div className='columns-2 md:columns-4'>
+						<img src='/trabalhos/foto4a.jpeg' />
+						<img src='/trabalhos/foto5a.jpeg' />
+						<img src='/trabalhos/foto7a.jpeg' />
+						<img src='/trabalhos/foto9a.jpeg' />
+					</div>
+				</div>
 			</Section>
 
 			{ /* FORNECEDORES */}
