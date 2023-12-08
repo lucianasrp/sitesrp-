@@ -10,6 +10,7 @@ export default function Suppliers() {
 		{ img: '/fornecedores/logo_eucafloor.webp', label: 'Eucafloor', href: '#' },
 		{ img: '/fornecedores/logo_kasfloor.webp', label: 'Kasfloor', href: '#' },
 		{ img: '/fornecedores/logo_madebene.webp', label: 'Madepene', href: '#' },
+		{ img: '/fornecedores/logo_quickstep.webp', label: 'Quick-Step', href: '#' },
 		{ img: '/fornecedores/logo_santaluzia.webp', label: 'Santaluzia', href: '#' },
 		{ img: '/fornecedores/logo_tarkett.webp', label: 'Tarkett', href: '#' },
 		{ img: '/fornecedores/logo_tsc.webp', label: 'Tapetes São Carlos', href: '#' },
