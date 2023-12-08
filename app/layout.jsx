@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className='flex flex-col h-screen justify-between'>
 
-        <Navbar src='/logo-white.svg'></Navbar>
+        <Navbar src='/logo.svg'></Navbar>
         <div className='mb-auto'>
           {children}
         </div>
