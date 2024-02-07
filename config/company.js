@@ -1,5 +1,5 @@
 const COMPANY = {
-	name: 'SRP Sartori Revert Pisos',
+	name: 'SRP Sartori Revest Pisos',
 	//cnpj: '12.345.678/0001-01',
 	worktime: 'Seg a Sex das 8:00 às 18:00',
 	location: {

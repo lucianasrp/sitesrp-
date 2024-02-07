@@ -101,7 +101,7 @@ export default function Page() {
 				
 				<div>
 					<h3>Píso Vinílico Injoy Tarkett</h3>
-					<div className='columns-2 md:columns-4 gap-4'>
+					<div className='columns-2 md:columns-4'>
 						<img src='/trabalhos/foto12a.jpeg' />
 						<img src='/trabalhos/foto12b.jpeg' />
 						<img src='/trabalhos/foto12c.jpeg' />
