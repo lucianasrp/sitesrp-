@@ -46,7 +46,7 @@ export default function Page() {
 				</div>
 
 				<div>
-				 	<h3>Piso Vinilico Tarkett - SESI Rio preto</h3>
+				 	<h3>Piso Vinílico Tarkett - SESI Rio preto</h3>
 				 	<div className='columns-2 md:columns-4'>
 				 		<img src='/trabalhos/foto2a.jpeg' />
 						<img src='/trabalhos/foto2b.jpeg' />
@@ -64,19 +64,52 @@ export default function Page() {
 				</div>
 
 				<div>
-				 	<h3>Piso Vinilico Belgotex - BR Mania Posto Pérola</h3>
+				 	<h3>Piso Vinílico Belgotex - BR Mania Posto Pérola</h3>
 				 	<div className='columns-2 md:columns-4'>
 				 		<img src='/trabalhos/foto6a.jpeg' />
 						<img src='/trabalhos/foto6b.jpeg' />
 						<img src='/trabalhos/foto6c.jpeg' />
 				 	</div>
 				</div>
-
+				
 				<div>
-				 	<h3>Piso Vinilico Durafloor - Academia W Fit</h3>
+				 	<h3>Piso Vinílico Durafloor - Academia W Fit</h3>
 				 	<div className='columns-2 md:columns-4'>
 						<img src='/trabalhos/foto8a.jpeg' />
 				 	</div>	
+				</div>
+				
+				<div>
+					<h3>Carpete Cross Belgotexm</h3>
+					<div className='columns-2 md:columns-4'>
+						<img src='/trabalhos/foto10a.jpeg' />
+						<img src='/trabalhos/foto10b.jpeg' />
+						<img src='/trabalhos/foto10c.jpeg' />
+						<img src='/trabalhos/foto10d.jpeg' />
+					</div>
+				</div>
+
+				<div>
+					<h3>Piso Vinílico Working Eucafloor</h3>
+					<div className='columns-2 md:columns-4'>
+						<img src='/trabalhos/foto11a.jpeg' />
+						<img src='/trabalhos/foto11b.jpeg' />
+						<img src='/trabalhos/foto11c.jpeg' />
+						<img src='/trabalhos/foto11d.jpeg' />
+					</div>
+				</div>
+				
+				<div>
+					<h3>Píso Vinílico Injoy Tarkett</h3>
+					<div className='columns-2 md:columns-4 gap-4'>
+						<img src='/trabalhos/foto12a.jpeg' />
+						<img src='/trabalhos/foto12b.jpeg' />
+						<img src='/trabalhos/foto12c.jpeg' />
+						<img src='/trabalhos/foto12d.jpeg' />
+						<img src='/trabalhos/foto12e.jpeg' />
+						<img src='/trabalhos/foto12f.jpeg' />
+						<img src='/trabalhos/foto12g.jpeg' />
+					</div>
 				</div>
 
 				<div>
