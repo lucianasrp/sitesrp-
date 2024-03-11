@@ -11,6 +11,7 @@ import Socials from '../socials';
 import CONTACT from '../../config/contact'
 
 const navmenu = [
+	{ label: 'Ofertas!', href: '/promocoes' },
 	{ label: 'Produtos', href: '/produtos' },
 	{ label: 'Serviços', href: '/servicos' },
 	//{ label: 'Obras Realizadas', href: '/obras-realizadas' },
@@ -38,14 +39,14 @@ export default function Navbar({ className, src, children }) {
 
 	return (
 		<>
-			<nav className={`fixed md:relative w-full p-0 z-[100] bg-base-100 ${className}`}>
-				<div className={`w-full mx-auto grid grid-cols-5 md:grid-cols-8`}>
+			<nav className={`fixed xl:relative w-full p-0 z-[100] bg-base-100 ${className}`}>
+				<div className={`w-full mx-auto grid grid-cols-5 xl:grid-cols-8`}>
 					<Link className='col-span-2 bg-primary p-2 lg:p-5' href='/'>
 						<img className='ml-auto h-10 lg:h-24' width='auto' height='auto' src={src} />
 					</Link>
 
 					<div className='col-span-5 
-													hidden md:flex flex-col items-end justify-end gap-4 px-2
+													hidden xl:flex flex-col items-end justify-end gap-4 px-2
 													transition-all duration-500 ease-in-out font-bold z-50'>
 						<div className='flex gap-6'>
 							{/* telefone */}
@@ -79,7 +80,7 @@ export default function Navbar({ className, src, children }) {
 						</div>
 					</div>
 					<div className='col-span-3 
-													flex md:hidden flex-row items-center justify-end gap-4 p-2
+													flex xl:hidden flex-row items-center justify-end gap-4 p-2
 													transition-all duration-500 ease-in-out font-bold'>
 						<label className="dui-btn dui-btn-circle dui-btn-ghost dui-swap dui-swap-rotate">
 							{/* this hidden checkbox controls the state */}
@@ -92,7 +93,7 @@ export default function Navbar({ className, src, children }) {
 					</div>
 				</div>
 			</nav>
-			<div className='fixed flex md:hidden flex-col items-center justify-center w-full h-full z-40 gap-6 backdrop-blur-md bg-white/30 transition-all duration-500' style={{top: (currentState ? '0%' : '-100%')}}>
+			<div className='fixed flex xl:hidden flex-col items-center justify-center w-full h-full z-40 gap-6 backdrop-blur-xl bg-white/30 transition-all duration-500' style={{top: (currentState ? '0%' : '-100%')}}>
 				<div className='flex flex-col items-center max-h-[60vh] overflow-y-auto w-full text-2xl font-bold gap-4'>
 							{ 
 								navmenu.map((item, index) => {
@@ -101,7 +102,7 @@ export default function Navbar({ className, src, children }) {
 										isSelected = (`/${pathNames[0]}` === item.href);
 
 									return (
-										<Link key={index} href={item.href} title={item.label} className={`border-solid border-b-2 border-base-100 hover:border-primary ${(isSelected ? 'bg-primary border-primary rounded-md px-4' : '')}`}>{item.label}</Link> 
+										<Link key={index} href={item.href} title={item.label} className={`border-solid border-b-2 border-base-100 hover:border-primary ${(isSelected ? 'bg-primary border-primary rounded-xl px-4' : '')}`}>{item.label}</Link> 
 									)
 								}) 
 							}

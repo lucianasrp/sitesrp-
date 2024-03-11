@@ -45,7 +45,12 @@ export default function Home() {
 				</div>
 			</Intro>
 
-			{ /* SERVIÇOS */}
+			{ /* PROMOÇÕES */ }
+			<Section>
+				
+			</Section>
+
+			{ /* SERVIÇOS */ }
 			<Section className='relative overflow-hidden' >
 				<div className='flex flex-col md:grid md:grid-cols-3 gap-10'>
 					<Card img='/home/cards/instalacao.webp'>
