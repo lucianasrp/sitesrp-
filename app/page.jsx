@@ -25,7 +25,7 @@ export default function Home() {
 					<div className='flex flex-col gap-4 justify-end row-start-1 row-span-2 md:col-start-2 md:col-span-2 md:row-span-4 p-4 text-center md:text-right'>
 						<h1 className='hidden md:block text-6xl'>Bem-Vindo</h1>
 						<h2 className='text-xl'>
-							Somos uma empresa especializada em transformar espaços através de pisos de alta qualidade e decorações sob medida. 
+							Nós somos uma empresa especializada em transformar espaços através de pisos de alta qualidade e decorações sob medida. 
 						</h2>
 						<h2 className='text-xl'>
 							Nossa equipe altamente qualificada garante resultados impressionantes que combinam beleza, durabilidade e funcionalidade. 
